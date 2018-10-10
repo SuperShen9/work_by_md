@@ -14,7 +14,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-file = 'C:\\Users\Administrator\Desktop\数据统计\红包捕鱼-每日数据\奇奇乐捕鱼7.xlsx'
+file = 'C:\\Users\Administrator\Desktop\月报统计\奇奇乐捕鱼9.xlsx'
 wb = xlrd.open_workbook(file)
 sheets = wb.sheet_names()
 
@@ -65,4 +65,4 @@ df_all['日期'] = pd.to_datetime(
 # 按照日期排序
 df_all.sort_values(by='日期', inplace=True)
 
-df_all.to_excel('C:\\Users\Administrator\Desktop\T.xlsx', index=False)
+df_all.to_excel('C:\\Users\Administrator\Desktop\T9.xlsx', index=False)

@@ -2,7 +2,7 @@
 # author：Super.Shen
 
 import pandas as pd
-from data import data
+from data import data, df_t
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
@@ -17,7 +17,8 @@ df_map.dropna(inplace=True)
 df123 = data()
 
 # 读取宝石数据
-df_jew = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\红宝石1008.xlsx')
+df_jew = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}红宝石.xlsx'.format(yue, ri_y))
+# df_jew = df_t(df_jew, 'gen_time')
 
 # 标记reason属性
 df_jew = pd.merge(left=df_jew, right=df_map, on='reason', how='left')
@@ -50,6 +51,5 @@ df1234 = pd.merge(left=df123, right=df4, on='用户id', how='left')
 # 合并总体数据
 df = pd.merge(left=df1234, right=df_add, on='用户id', how='left')
 
-print(df.head())
 
 df.to_excel('C:\\Users\Administrator\Desktop\out1009.xlsx',index=False)
