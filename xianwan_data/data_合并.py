@@ -2,6 +2,7 @@
 # author：Super.Shen
 
 import pandas as pd
+import os
 from Func import nian, yue, ri, ri_y, df_sum, df_t
 
 pd.set_option('expand_frame_repr', False)
@@ -10,15 +11,32 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+# 切换到数据目录
+filepath = 'C:\\Users\Administrator\Desktop\\xianwan4'
+os.chdir(filepath)
+
+# 读取文件并合并
+for x, y, excels in os.walk(filepath):
+    len_fk = len(excels)
+    for name in ['充值', '兑奖', '宝石', '注册']:
+        df = pd.DataFrame()
+        for excel in excels:
+            if excel.split('.')[0][-2:] == name:
+                print('读取文件名称：{}'.format(excel))
+                df1 = pd.read_excel(excel)
+                df = df.append(df1, ignore_index=True)
+        print('-'*50)
+        df.to_excel('C:\\Users\Administrator\Desktop\\xianwan_合并\\{}{}{}.xlsx'.format(yue,ri_y,name),index=False)
+
 def data():
     # 读取数据
-    df_in = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}充值.xlsx'.format(yue, ri_y))
+    df_in = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan_合并\\{}{}充值.xlsx'.format(yue, ri_y))
     # df_in = df_t(df_in, 'pay_time')
 
-    df_dui = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}兑奖.xlsx'.format(yue, ri_y))
+    df_dui = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan_合并\\{}{}兑奖.xlsx'.format(yue, ri_y))
     # df_dui = df_t(df_dui, '兑换日期')
 
-    df_reg = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}注册.xlsx'.format(yue, ri_y))
+    df_reg = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan_合并\\{}{}注册.xlsx'.format(yue, ri_y))
     # df_reg = df_t(df_reg, '注册时间')
 
     # 计算每个用户充值金额
@@ -70,7 +88,7 @@ df_map.dropna(inplace=True)
 df123 = data()
 
 # 读取宝石数据
-df_jew = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}红宝石.xlsx'.format(yue, ri_y))
+df_jew = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan_合并\\{}{}宝石.xlsx'.format(yue, ri_y))
 # df_jew = df_t(df_jew, 'gen_time')
 
 # 标记reason属性
@@ -127,5 +145,6 @@ df_c[' '] = ' '
 df3 = pd.concat([df_a, df_c], axis=1)
 df3 = pd.concat([df3, df_b], axis=1)
 
+
 # 输出数据
-df3.to_excel('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y), index=False)
+df3.to_excel('C:\\Users\Administrator\Desktop\\闲玩安卓{}天统计.xlsx'.format(int(ri)-8), index=False)
