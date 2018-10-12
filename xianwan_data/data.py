@@ -113,7 +113,7 @@ df_a[' '] = ' '
 
 # 筛选【持平】部分，为了【总和】从新排序，为了横向合并重置索引，增加隔开列
 df_b = df_sum(df[df['单用户盈利'] == 0])
-df_a.sort_values(by='单用户盈利', ascending=0, inplace=True)
+df_a.sort_values(by='充值金额', ascending=0, inplace=True)
 df_b.reset_index(drop=True, inplace=True)
 
 
@@ -129,3 +129,20 @@ df3 = pd.concat([df3, df_b], axis=1)
 
 # 输出数据
 df3.to_excel('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y), index=False)
+
+
+# 利用openpyxl修整excel
+import openpyxl
+
+# 打开桌面文件
+wb = openpyxl.load_workbook('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y))
+
+# 获取激活sheet，重命名
+ws = wb.active
+ws.title = "Data"
+
+# 创建新的sheet并且命名
+wb.create_sheet('Summary', 0)
+
+# 从新保存Excel
+wb.save('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y))

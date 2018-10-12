@@ -31,7 +31,7 @@ if len(ri) < 2:
 def df_sum(df):
     i = 10000
     df.loc[i, '用户id'] = '汇总：'
-    df.loc[i, '昵称'] = df.shape[0]-1
+    df.loc[i, '昵称'] = '{}人'.format(df.shape[0]-1)
     df.loc[i, '充值金额'] = df['充值金额'].sum()
     df.loc[i, '兑换金额'] = df['兑换金额'].sum()
     df.loc[i, '单用户盈利'] = df['单用户盈利'].sum()
