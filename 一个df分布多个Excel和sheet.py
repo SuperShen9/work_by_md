@@ -22,11 +22,14 @@ del df['最高在线']
 
 file_path = 'C:\\Users\Administrator\Desktop\\text'
 for x, y, excels in os.walk(file_path):
-    # print(x)
+    # print(y)
     for excel in excels:
         # print(excel)
         if excel.startswith('各'):
             wb = xlrd.open_workbook(x+'\\'+excel)
-            print(wb.sheet_names())
+            for sheet_name in wb.sheet_names():
+                sh = wb.sheet_by_name(sheet_name)
+
+                print(sh.cell(1, 2).value)
             exit()
 
