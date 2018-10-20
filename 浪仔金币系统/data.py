@@ -10,8 +10,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # 读取数据
-df = pd.read_excel('C:\\Users\Administrator\Desktop\浪仔系统_金币_充值\\17号充值.xlsx')
-df_hb = pd.read_excel('C:\\Users\Administrator\Desktop\浪仔系统_金币_充值\\红包17号盈利.xlsx')
+df = pd.read_excel('D:\MD_DATA\\1018数据\浪仔系统_金币_充值\\17号充值.xlsx')
+df_hb = pd.read_excel('D:\MD_DATA\\1018数据\浪仔系统_金币_充值\\红包17号盈利.xlsx')
 
 # 转化时间格式
 df['pay_time'] = pd.to_datetime(df['pay_time'])
