@@ -69,8 +69,8 @@ del df_form['总用户量']
 del df_form['总消费']
 
 # 调价到累加数据 / 去重
-df_form = df_form.append(df_lei, ignore_index=True)
-df_form.drop_duplicates(keep='first', inplace=True)
+df_form = df_lei.append(df_form, ignore_index=True)
+df_form.drop_duplicates(keep='last', inplace=True)
 
 # 导出到桌面
 df_form.to_excel('C:\\Users\Administrator\Desktop\\奇奇乐{}号新用户统计情况.xlsx'.format(ri_y2), index=False)
@@ -78,4 +78,6 @@ print('\n数据已导出到桌面……！')
 
 # 数据存放累加数据
 df_form.to_excel('D:\MD_DATA\奇奇乐新用户叠加\\data.xlsx', index=False)
-print('\n数据已累加到 data ……')
+print('\n数据已累加到 data ……\n')
+
+print('{}月{}号奇奇乐【新注册用户】充值情况'.format(yue, ri_y2))

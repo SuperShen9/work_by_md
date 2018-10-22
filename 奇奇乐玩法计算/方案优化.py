@@ -18,13 +18,13 @@ h2 = 20
 h3 = 100
 
 # # 闲玩安卓第四期
-# c1 = 0.1104
-# c2 = 1.104
-# c3 = 3.968
-
 c1 = 0.1104
-c2 = 0.904
-c3 = 1.768
+c2 = 1.104
+c3 = 3.968
+
+# c1 = 0.1104
+# c2 = 0.904
+# c3 = 1.768
 
 # 读取方案数据
 df = pd.read_excel('C:\\Users\Administrator\Desktop\闲玩4期.xlsx')
@@ -86,4 +86,4 @@ del df['应付金额']
 # print(df)
 # exit()
 
-df.to_excel('C:\\Users\Administrator\Desktop\闲玩4期_运算.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\方案优化_运算.xlsx', index=False)

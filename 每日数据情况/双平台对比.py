@@ -53,10 +53,10 @@ df_c2 = df_cut(df2, 'player_id', 'amount')
 
 df_c = pd.DataFrame([df_c, df_c2]).T
 df_c.reset_index(inplace=True)
-df_c.columns = ['充值区间','浪仔', '奇奇乐']
+df_c.columns = ['充值区间', '浪仔', '奇奇乐']
 
 df_form = pd.concat([df_form, df_c], axis=1)
 
-print(df_form)
-# exit()
+print('{}月{}号双平台【区间充值】分布情况'.format(yue, ri_y))
+
 df_form.to_excel('C:\\Users\Administrator\Desktop\双平台{}充值情况.xlsx'.format(ri_y), index=False)

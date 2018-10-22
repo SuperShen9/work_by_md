@@ -10,6 +10,10 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+# 创建空df记录信息
+df_summary = pd.DataFrame()
+
+
 def data():
     # 读取数据
     df_in = pd.read_excel('C:\\Users\Administrator\Desktop\\xianwan4\\{}{}充值.xlsx'.format(yue, ri_y))
@@ -53,6 +57,21 @@ def data():
     # 总表标记用老用户
     df123 = pd.merge(left=df12, right=df_reg, on='用户id', how='left')
     df123['新老用户'].fillna(value='老', inplace=True)
+
+    # summary信息补充
+    df_summary.loc[0, '渠道'] = '闲玩安卓'
+
+    df_summary.loc[0, 'Flag'] = '注册人数'
+    df_summary.loc[0, '计数'] = df_reg.shape[0]
+
+    df_summary.loc[1, 'Flag'] = '充值金额'
+    df_summary.loc[1, '计数'] = df_in['amount'].sum()
+
+    df_summary.loc[2, 'Flag'] = '兑换红包'
+    df_summary.loc[2, '计数'] = df_dui['金额'].sum()
+
+    df_summary.loc[3, 'Flag'] = '推广费'
+    df_summary.loc[4, 'Flag'] = '盈利'
 
     return df123
 
@@ -116,7 +135,6 @@ df_b = df_sum(df[df['单用户盈利'] == 0])
 df_a.sort_values(by='充值金额', ascending=0, inplace=True)
 df_b.reset_index(drop=True, inplace=True)
 
-
 # 筛选【亏损】部分，为了【总和】从新排序，为了横向合并重置索引，增加隔开列
 df_c = df_sum(df[df['单用户盈利'] < 0])
 df_c.sort_values(by='单用户盈利', inplace=True)
@@ -128,21 +146,10 @@ df3 = pd.concat([df_a, df_c], axis=1)
 df3 = pd.concat([df3, df_b], axis=1)
 
 # 输出数据
-df3.to_excel('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y), index=False)
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y))
+df_summary.to_excel(writer, sheet_name='summary', index=False)
+df3.to_excel(writer, sheet_name='data', index=False)
 
+writer.save()
 
-# 利用openpyxl修整excel
-import openpyxl
-
-# 打开桌面文件
-wb = openpyxl.load_workbook('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y))
-
-# 获取激活sheet，重命名
-ws = wb.active
-ws.title = "Data"
-
-# 创建新的sheet并且命名
-wb.create_sheet('Summary', 0)
-
-# 从新保存Excel
-wb.save('C:\\Users\Administrator\Desktop\\闲玩安卓{}{}统计.xlsx'.format(yue, ri_y))
+print('渠道【闲玩安卓】{}月{}号收支情况以及用户充值统计'.format(yue, ri_y))

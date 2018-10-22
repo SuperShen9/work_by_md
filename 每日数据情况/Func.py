@@ -40,7 +40,7 @@ def gb(df, gb_col, sum_col):
     df_m.reset_index(drop=True, inplace=True)
     return df_m
 
-
+# 切割函数
 def df_cut(df, gb_col, sum_col):
 
     df_m = gb(df, gb_col, sum_col)
