@@ -17,7 +17,7 @@ from datetime import *
 time1 = datetime.today()
 nian = str(time1.year)
 yue = str(time1.month)
-ri_y = str(time1.day - 2)
+ri_y = str(time1.day - 1)
 ri = str(time1.day)
 
 if len(yue) < 2:
