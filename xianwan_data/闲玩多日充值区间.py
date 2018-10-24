@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_excel('C:\\Users\Administrator\Desktop\充值1022.xlsx')
+df = pd.read_excel('C:\\Users\Administrator\Desktop\充值1023.xlsx')
 
 df['date'] = df['pay_time'].apply(lambda x: pd.to_datetime(x.split(' ')[0]))
 
@@ -22,6 +22,6 @@ for x, y in df.groupby('date'):
     df_a = df_a.append(df1.T)
 
 print(df_a)
-exit()
+# exit()
 
 df_a.to_excel('C:\\Users\Administrator\Desktop\TTT.xlsx')
