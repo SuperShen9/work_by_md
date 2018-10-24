@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 
 try:
     # 读取数据
-    df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\奇23.xlsx')
+    df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\奇充23.xlsx')
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 except FileNotFoundError:
     print('\n缺少运行数据，请先下载……')
@@ -33,12 +33,11 @@ for x, y in df.groupby(['time']):
 df_out.fillna(0, inplace=True)
 df_out.sort_values(by=df_out.columns[-1], ascending=0, inplace=True)
 
-print(df_out.columns[0][-2:])
-exit()
-df_out['比例'] = df_out[df_out.columns[0]].apply(lambda x: '%.2f%%'%(x / df_out[df_out.columns[0]].sum()*100))
+df_out[df_out.columns[0][-2:]+'号比例'] = df_out[df_out.columns[0]].apply(lambda x: '%.2f%%'%(x / df_out[df_out.columns[0]].sum()*100))
+df_out[df_out.columns[1][-2:]+'号比例'] = df_out[df_out.columns[1]].apply(lambda x: '%.2f%%'%(x / df_out[df_out.columns[1]].sum()*100))
 
 print(df_out)
 
-exit()
+# exit()
 
-df_out.to_excel('C:\\Users\Administrator\Desktop\T24.xlsx')
+df_out.to_excel('C:\\Users\Administrator\Desktop\表格提取源\充值支付类型占比.xlsx')

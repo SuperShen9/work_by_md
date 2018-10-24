@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b15ad20-01a9-4201-93b2-e0ce8e44c918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/于_每日数据指标/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/Func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/奇奇乐每日新用户.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/奖品发放.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/我要赚钱.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/红宝石.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/于_每日数据指标/金币分类.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xianwan_data/闲玩多日充值区间.py" beforeDir="false" afterPath="$PROJECT_DIR$/xianwan_data/闲玩多日充值区间.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py" beforeDir="false" afterPath="$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +21,7 @@
     <session id="2137481134">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -28,57 +32,105 @@
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="177" />
+          <entry key="py" value="192" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="177" />
+          <entry key="Python" value="192" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="17855" />
+          <entry key="py" value="19927" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="17855" />
+          <entry key="Python" value="19927" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/奇奇乐每日新用户.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="-196">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/每日数据情况/双平台对比.py">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/金币分类.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="16" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="68">
+              <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="51" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="88" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/红宝石.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="42" column="52" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="52" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+                <marker date="1540375617187" expanded="true" signature="677:1506" ph="..." />
+                <marker date="1540375617187" expanded="true" signature="891:892" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/我要赚钱.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="48" column="75" lean-forward="true" selection-start-line="48" selection-end-line="48" selection-end-column="75" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/于_每日数据指标/奖品发放.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -100,12 +152,14 @@
       <find>df_s</find>
       <find>df</find>
       <find>print</find>
+      <find>df_lei</find>
+      <find>df2</find>
     </findStrings>
     <replaceStrings>
       <replace>df4</replace>
       <replace>i</replace>
-      <replace>df</replace>
       <replace>df_all</replace>
+      <replace>df</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -114,9 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/多excel读取多个sheet.py" />
-        <option value="$PROJECT_DIR$/读取多个sheet_0930.py" />
-        <option value="$PROJECT_DIR$/0930code/0930.py" />
         <option value="$PROJECT_DIR$/0930code/0930_index.py" />
         <option value="$PROJECT_DIR$/0930code/0930_cycle.py" />
         <option value="$PROJECT_DIR$/xianwan_data/备用.py" />
@@ -162,7 +213,12 @@
         <option value="$PROJECT_DIR$/奇奇乐玩法计算/方案优化2.py" />
         <option value="$PROJECT_DIR$/每日数据情况/双平台对比.py" />
         <option value="$PROJECT_DIR$/xianwan_data/闲玩多日充值区间.py" />
+        <option value="$PROJECT_DIR$/于_每日数据指标/金币分类.py" />
         <option value="$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py" />
+        <option value="$PROJECT_DIR$/于_每日数据指标/奇奇乐每日新用户.py" />
+        <option value="$PROJECT_DIR$/于_每日数据指标/红宝石.py" />
+        <option value="$PROJECT_DIR$/于_每日数据指标/我要赚钱.py" />
+        <option value="$PROJECT_DIR$/于_每日数据指标/奖品发放.py" />
       </list>
     </option>
   </component>
@@ -180,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,31 +251,43 @@
             <path>
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="备用code文件" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="备用code文件" type="462c0819:PsiDirectoryNode" />
+              <item name="推广用户" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="每日数据情况" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\于_每日数据指标" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\奇奇乐玩法计算" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\玩法计算" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\每日数据情况" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\推广用户" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\奇奇乐玩法计算" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件\浪仔数据分析" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\玩法计算\备用方案" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\多表输出" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\奇奇乐玩法计算" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\玩法计算" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\每日数据情况" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\推广用户" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\推广用户\奇奇乐" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,8 +302,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.充值支付类型占比">
-    <configuration name="奇奇乐每日新用户" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.奖品发放">
+    <configuration name="奇奇乐每日新用户 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,11 +311,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/每日数据情况" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/每日数据情况/奇奇乐每日新用户.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/于_每日数据指标/奇奇乐每日新用户.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,7 +324,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="方案优化2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="金币分类" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,11 +332,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/奇奇乐玩法计算" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/奇奇乐玩法计算/方案优化2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/于_每日数据指标/金币分类.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="奖品发放" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/于_每日数据指标/奖品发放.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="红宝石" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/于_每日数据指标/红宝石.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="我要赚钱" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/于_每日数据指标/我要赚钱.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -447,19 +577,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.奇奇乐每日新用户" />
-      <item itemvalue="Python.方案优化2" />
-      <item itemvalue="Python.双平台对比" />
-      <item itemvalue="Python.闲玩多日充值区间" />
-      <item itemvalue="Python.充值支付类型占比" />
+      <item itemvalue="Python.奇奇乐每日新用户 (1)" />
+      <item itemvalue="Python.金币分类" />
+      <item itemvalue="Python.红宝石" />
+      <item itemvalue="Python.我要赚钱" />
+      <item itemvalue="Python.奖品发放" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.充值支付类型占比" />
-        <item itemvalue="Python.闲玩多日充值区间" />
-        <item itemvalue="Python.双平台对比" />
-        <item itemvalue="Python.方案优化2" />
-        <item itemvalue="Python.奇奇乐每日新用户" />
+        <item itemvalue="Python.奖品发放" />
+        <item itemvalue="Python.我要赚钱" />
+        <item itemvalue="Python.红宝石" />
+        <item itemvalue="Python.奇奇乐每日新用户 (1)" />
+        <item itemvalue="Python.金币分类" />
       </list>
     </recent_temporary>
   </component>
@@ -494,7 +624,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40378198" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4393771" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -581,13 +711,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/推广用户/奇奇乐/data.py" />
-    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/备用code文件/多表输出/批量读取.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -708,22 +831,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/备用.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/每日数据情况/test.py" />
     <entry file="file://$PROJECT_DIR$/多表输出/test.py" />
-    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/充值再合并.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/备用code文件/多表输出/批量导出.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -762,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/每日数据情况/奇奇乐每日新用户.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xianwan_data/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
@@ -787,9 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,6 +896,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="10" lean-forward="true" selection-start-line="16" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/Func.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/备用.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/充值再合并.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/每日数据情况/奇奇乐每日新用户.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="59" column="105" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="105" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/奇奇乐每日新用户.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/金币分类.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="51" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
           </folding>
@@ -805,8 +955,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/于_每日数据指标/充值支付类型占比.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="595">
+          <caret line="35" column="88" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/红宝石.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="42" column="52" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="52" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+            <marker date="1540375617187" expanded="true" signature="677:1506" ph="..." />
+            <marker date="1540375617187" expanded="true" signature="891:892" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/我要赚钱.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="48" column="75" lean-forward="true" selection-start-line="48" selection-end-line="48" selection-end-column="75" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/于_每日数据指标/奖品发放.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
