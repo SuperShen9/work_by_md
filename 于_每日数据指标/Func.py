@@ -30,6 +30,24 @@ if len(ri) < 2:
 if len(ri_y2) < 2:
     ri_y2 = '0' + ri_y2
 
+def du_excel(excel_name):
+    try:
+        # 读取数据
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\{}.xlsx'.format(excel_name))
+        return df
+    except FileNotFoundError:
+        print('\n缺少运行数据，请先下载……')
+        exit()
+
+def du_old_excel(excel_name):
+    try:
+        # 读取数据
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\{}.xls'.format(excel_name))
+        return df
+    except FileNotFoundError:
+        print('\n缺少运行数据，请先下载……')
+        exit()
+
 
 # 优化groupby之后的输出结果
 def gb(df, gb_col, sum_col):

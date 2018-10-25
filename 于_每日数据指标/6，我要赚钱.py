@@ -4,19 +4,14 @@
 import pandas as pd
 import numpy as np
 from Func import gb, ri_y, nian, yue, df_cut, ri_y2
-
+from Func import du_old_excel
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
 
 warnings.filterwarnings('ignore')
 
-try:
-    # 读取数据
-    df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\我要赚钱.xlsx')
-except FileNotFoundError:
-    print('\n缺少运行数据，请先下载……')
-    exit()
+df=du_old_excel('我要赚钱')
 
 df['奖励一状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
 df['奖励二状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
@@ -46,4 +41,5 @@ df = df[['time', '奖励一状态', '奖励二状态', '奖励三状态', '一�
 
 df.rename(columns={'奖励一状态': '奖励一完成人数', '奖励二状态': '奖励二完成人数', '奖励三状态': '奖励三完成人数', 'time': '日期'}, inplace=True)
 
-df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\我要赚钱.xlsx', index=False)
+
+df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\我要赚钱_OUT.xlsx', index=False)

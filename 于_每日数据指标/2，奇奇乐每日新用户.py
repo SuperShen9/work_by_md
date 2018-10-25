@@ -12,8 +12,8 @@ warnings.filterwarnings('ignore')
 
 try:
     # 读取数据
-    df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\奇充23.xlsx')
-    df3 = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\奇注{}.xlsx'.format(ri_y2))
+    df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\充值2天.xls'.format(ri_y))
+    df3 = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\注册.xls'.format(ri_y2))
     df_lei = pd.read_excel('D:\MD_DATA\奇奇乐新用户叠加\\data.xlsx')
 except FileNotFoundError:
     print('\n缺少运行数据，请先下载……')
@@ -43,7 +43,7 @@ i = 0
 df_form = pd.DataFrame()
 
 def df_f(df):
-    df_form.loc[i, '平台'] = '奇奇乐'
+    # df_form.loc[i, '平台'] = '奇奇乐'
     df_form.loc[i, '日期'] = '{}/{}/{}'.format(nian, yue, ri_y2)
 
     # 人数计算
@@ -54,7 +54,7 @@ def df_f(df):
     # 金额消费计算
     df_form.loc[i, '新用户消费金额'] = df[df['Flag'] == 'new']['amount'].sum()
     df_form.loc[i, '总消费'] = df['amount'].sum()
-    df_form.loc[i, '新用户消费占比'] = '%.2f%%' % (df_form.loc[i, '新用户消费'] / df_form.loc[i, '总消费'] * 100)
+    df_form.loc[i, '新用户消费占比'] = '%.2f%%' % (df_form.loc[i, '新用户消费金额'] / df_form.loc[i, '总消费'] * 100)
 
     # 次日再消费人数
     df_form.loc[i, '次日再消费用户量'] = len(df2[df2['Flag'] == 'new']['player_id'].unique())
@@ -62,7 +62,7 @@ def df_f(df):
 
     # # 次日再消费金额计算
     df_form.loc[i, '次日再消费金额'] = df2[df2['Flag'] == 'new']['amount'].sum()
-    df_form.loc[i, '次日再消费金额比'] = '%.2f%%' % (df_form.loc[i, '次日再消费金额'] / df_form.loc[i, '新用户消费'] * 100)
+    df_form.loc[i, '次日再消费金额比'] = '%.2f%%' % (df_form.loc[i, '次日再消费金额'] / df_form.loc[i, '新用户消费金额'] * 100)
 
     return df_form
 

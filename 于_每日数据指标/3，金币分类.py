@@ -18,6 +18,13 @@ except FileNotFoundError:
     print('\n缺少运行数据，请先下载……')
     exit()
 
+# 金币消耗-透视
+df2 = df[df.columns[-3:]]
+df2.dropna(axis=0, how='any', inplace=True)
+df2 = pd.pivot_table(df2, values='数值2', index='时间2', columns='原因2')
+df2.reset_index(inplace=True)
+
+# 金币产出-透视
 df = df[df.columns[:3]]
 df_map = df_map[['原因', 'jinbi']]
 df_map.dropna(inplace=True)
@@ -25,16 +32,18 @@ df_map.dropna(inplace=True)
 # 合并匹配表
 df = pd.merge(left=df, right=df_map, on='原因', how='left')
 
-df= df.groupby(['时间', 'jinbi'])['数值'].sum()
+df = df.groupby(['时间', 'jinbi'])['数值'].sum()
 
-df=pd.DataFrame(df)
+df = pd.DataFrame(df)
 df.reset_index(inplace=True)
 
 df = pd.pivot_table(df, values='数值', index='时间', columns='jinbi')
+
 df.reset_index(inplace=True)
 
-df = df[['时间','用户充值','系统赠送','单局结算','兑换礼物','领取邮件']]
+df = df[['时间', '用户充值', '系统赠送', '单局结算', '兑换礼物', '领取邮件']]
 
-df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\金币分类.xlsx',index=False)
-
-# print(df)
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\金币分类_OUT.xlsx')
+df.to_excel(writer, sheet_name='金币产出', index=False)
+df2.to_excel(writer, sheet_name='金币消耗', index=False)
+writer.save()
