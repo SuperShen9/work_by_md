@@ -40,26 +40,28 @@ df = df[['types', 'time', 'Outlay', 'Income', 'redgem', 'num']]
 
 df = df.tail(6)
 
+df = df[df['types'] == 1]
+
 
 def cal(col):
-    y.loc[2, col] = '%.1f%%' % ((y.loc[1, col] - y.loc[0, col]) / y.loc[0, col] * 100)
-    return y.loc[2, col]
+    df.loc[2, col] = '%.1f%%' % ((df.loc[1, col] - df.loc[0, col]) / df.loc[0, col] * 100)
+    return df.loc[2, col]
 
 
-for x, y in df.groupby('types'):
-    y.reset_index(drop=True, inplace=True)
-    y['回收比'] = (y['Income'] + y['redgem'] * 2000) / y['Outlay']
+df.reset_index(drop=True, inplace=True)
+df['回收比'] = (df['Income'] + df['redgem'] * 2000) / df['Outlay']
 
-    y.loc[2, 'time'] = '环比'
-    y.loc[2, '回收比'] = (y.loc[1, '回收比'] - y.loc[0,'回收比'])
-    cal('Outlay')
-    cal('Income')
-    cal('redgem')
-    cal('num')
+df.loc[2, 'time'] = '环比'
+df.loc[2, '回收比'] = (df.loc[1, '回收比'] - df.loc[0, '回收比'])
+cal('Outlay')
+cal('Income')
+cal('redgem')
+cal('num')
 
-    y['回收比'] = y['回收比'].apply(lambda x:'%.2f%%' %(x*100))
+df['回收比'] = df['回收比'].apply(lambda x: '%.2f%%' % (x * 100))
 
-    print(x)
-    print(y)
+df.rename(columns={'Outlay': '金币消耗', 'Income': '金币产出', 'redgem': '红宝石', 'num': '活跃用户数', 'time': '时间'}, inplace=True)
 
+df = df[df.columns[1:]]
 
+print(df)

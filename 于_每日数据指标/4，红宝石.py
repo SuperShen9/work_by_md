@@ -3,7 +3,8 @@
 
 import pandas as pd
 import numpy as np
-from Func import du_excel
+from Func import du_excel, ri_y2, nian, yue
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -15,12 +16,18 @@ df2 = du_excel('红宝石明细')
 
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\红宝石_OUT.xlsx')
 
+'----------------------计算第一个表----------------------------------------------------------'
+
 df = pd.pivot_table(df, values='数值', index='时间', columns='原因')
 df.reset_index(inplace=True)
 
 df = df[['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '分享抽奖', '玩家兑换礼物', '幸运抽奖', '购买物品', '欢乐夺宝']]
 
+df = df[df['时间'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
+
 df['时间'] = df['时间'].apply(lambda x: str(x)[:10])
+
+'================================计算第二个表========================================='
 
 
 def fx(x):
@@ -48,15 +55,22 @@ def hongbaoshi_minxi(df2, value):
 
     return df2
 
+
 df_ren = hongbaoshi_minxi(df2, '次数')
 
 df_money = hongbaoshi_minxi(df2, '总额')
 
 df2 = df_ren.append(df_money)
 
+df2 = df2[df2['日期'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
 df2['日期'] = df2['日期'].apply(lambda x: str(x)[:10])
 
+# print(df)
+# print('-' * 100)
+# print(df2)
+# exit()
+
 # 数据导出
-df.to_excel(writer, sheet_name='宝石分类',index=False)
-df2.to_excel(writer, sheet_name='宝石明细',index=False)
+df.to_excel(writer, sheet_name='宝石分类', index=False)
+df2.to_excel(writer, sheet_name='宝石明细', index=False)
 writer.save()

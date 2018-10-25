@@ -26,7 +26,7 @@ try:
 
 except KeyError:
     df = df[['2元红包', '5元红包', '8元红包', '10元红包', '10元话费']]
-    df['100元话费']=0
+    df['100元话费'] = 0
 
 df.fillna(0, inplace=True)
 
