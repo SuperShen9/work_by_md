@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 df = du_excel('红宝石')
 df2 = du_excel('红宝石明细')
 
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\红宝石_OUT.xlsx')
+
 
 '----------------------计算第一个表----------------------------------------------------------'
 
@@ -65,12 +65,14 @@ df2 = df_ren.append(df_money)
 df2 = df2[df2['日期'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
 df2['日期'] = df2['日期'].apply(lambda x: str(x)[:10])
 
+# ================test==========
+# df = pd.concat([df.reset_index(drop=True), df2.reset_index(drop=True)], axis=1)
 # print(df)
-# print('-' * 100)
-# print(df2)
+# # print(df2)
 # exit()
 
 # 数据导出
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\红宝石_OUT.xlsx')
 df.to_excel(writer, sheet_name='宝石分类', index=False)
 df2.to_excel(writer, sheet_name='宝石明细', index=False)
 writer.save()
