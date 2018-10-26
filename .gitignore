@@ -9,7 +9,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-dingding/
 develop-eggs/
 dist/
 downloads/
@@ -90,6 +89,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+dingding/
 
 # Spyder project settings
 .spyderproject
