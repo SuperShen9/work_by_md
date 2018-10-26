@@ -89,7 +89,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-*hehe2/
+hehe3:
 
 # Spyder project settings
 .spyderproject
