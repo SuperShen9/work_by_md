@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b15ad20-01a9-4201-93b2-e0ce8e44c918" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hehe/text.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hehe1/12.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hehe2/223.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hehe3/1211.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heihei/dsadsf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heihei1/asad.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,43 +38,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="3" />
-          <entry key="py" value="233" />
+          <entry key="gitignore" value="4" />
+          <entry key="py" value="235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="233" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="57" />
-          <entry key="gitignore" value="23" />
+          <entry key="gitignore" value="33" />
           <entry key="py" value="21920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="80" />
+          <entry key="PLAIN_TEXT" value="90" />
           <entry key="Python" value="21920" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,8 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/多表输出/TTT.py" />
-        <option value="$PROJECT_DIR$/多表输出/test.py" />
         <option value="$PROJECT_DIR$/多表输出/批量读取.py" />
         <option value="$PROJECT_DIR$/多表输出/批量导出.py" />
         <option value="$PROJECT_DIR$/浪仔金币系统/data.py" />
@@ -161,11 +146,13 @@
         <option value="$PROJECT_DIR$/hehe1/12.py" />
         <option value="$PROJECT_DIR$/hehe2/223.py" />
         <option value="$PROJECT_DIR$/hehe3/1211.py" />
+        <option value="$PROJECT_DIR$/heihei/dsadsf.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/heihei1/asad.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="692" />
     <option name="y" value="17" />
     <option name="width" value="1400" />
@@ -601,8 +588,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15486258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -646,20 +632,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/多excel读取多个sheet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="41" column="69" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/奇奇乐玩法计算/备用方案/data3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/奇奇乐玩法计算/备用方案/data2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -947,10 +919,20 @@
     <entry file="file://$PROJECT_DIR$/hehe3/1211.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/heihei/dsadsf.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heihei1/asad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
