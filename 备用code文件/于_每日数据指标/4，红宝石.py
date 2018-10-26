@@ -21,7 +21,7 @@ df2 = du_excel('红宝石明细')
 df = pd.pivot_table(df, values='数值', index='时间', columns='原因')
 df.reset_index(inplace=True)
 
-df = df[['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '分享抽奖', '玩家兑换礼物', '幸运抽奖', '购买物品', '欢乐夺宝']]
+df = df[['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '分享抽奖', '玩家兑换红包', '玩家兑换话费','玩家兑换金币','玩家兑换礼物','幸运抽奖', '购买物品', '欢乐夺宝']]
 
 df = df[df['时间'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
 
@@ -72,7 +72,7 @@ df2['日期'] = df2['日期'].apply(lambda x: str(x)[:10])
 # exit()
 
 # 数据导出
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\红宝石_OUT.xlsx')
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\红宝石_OUT.xlsx')
 df.to_excel(writer, sheet_name='宝石分类', index=False)
 df2.to_excel(writer, sheet_name='宝石明细', index=False)
 writer.save()
