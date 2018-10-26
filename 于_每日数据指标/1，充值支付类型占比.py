@@ -38,7 +38,7 @@ df_out[df_out.columns[1][-2:]+'号比例'] = df_out[df_out.columns[1]].apply(lam
 
 
 df_out.reset_index(inplace=True)
-df_out.rename(columns={'index':'类型'},inplace=True)
+df_out.rename(columns={'Flag':'类型'},inplace=True)
 
 print(df_out)
 

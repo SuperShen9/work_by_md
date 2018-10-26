@@ -22,7 +22,11 @@ except FileNotFoundError:
 df2 = df[df.columns[-3:]]
 df2.dropna(axis=0, how='any', inplace=True)
 df2 = pd.pivot_table(df2, values='数值2', index='时间2', columns='原因2')
+del df2['单局结算']
 df2.reset_index(inplace=True)
+df2['时间2'] = df2['时间2'].apply(lambda x: str(x)[:10])
+
+
 
 # 金币产出-透视
 df = df[df.columns[:3]]
@@ -41,9 +45,15 @@ df = pd.pivot_table(df, values='数值', index='时间', columns='jinbi')
 
 df.reset_index(inplace=True)
 
-df = df[['时间', '用户充值', '系统赠送', '单局结算', '兑换礼物', '领取邮件']]
+df = df[['时间', '用户充值', '系统赠送', '兑换礼物', '领取邮件']]
+df['时间'] = df['时间'].apply(lambda x: str(x)[:10])
+
+# print(df)
+# print('-' * 100)
+# print(df2)
+# exit()
 
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\金币分类_OUT.xlsx')
-df.to_excel(writer, sheet_name='金币产出', index=False)
-df2.to_excel(writer, sheet_name='金币消耗', index=False)
+df.tail(2).to_excel(writer, sheet_name='金币产出', index=False)
+df2.tail(2).to_excel(writer, sheet_name='金币消耗', index=False)
 writer.save()
