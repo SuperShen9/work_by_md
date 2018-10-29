@@ -10,23 +10,6 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-
-def run7():
-    df = du_excel('税收')
-
-    df['日期'] = df['日期'].apply(lambda x: str(x)[:10])
-
-    df = pd.pivot_table(df, values='税收', index='日期', columns='场')
-    df['总和'] = df.apply(lambda x: x.sum(), axis=1)
-    df.reset_index(inplace=True)
-
-    df.rename(columns={'猜猜乐场':'猜猜乐'},inplace=True)
-
-    df = df[['日期', '红包场', '鱼雷场', '猜猜乐','总和']]
-
-    return df.tail(2)
-
-
 def run8():
     df = du_excel('回收比')
     df['time'] = df['时间'].apply(lambda x: str(x)[:10])
@@ -43,6 +26,21 @@ def run8():
 
     return df.tail(2)
 
-# print(df)
 
-# df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\税收_OUT.xlsx',index=False)
+def run7():
+    df = du_excel('税收test')
+
+    df['日期'] = df['日期'].apply(lambda x: str(x)[:10])
+    df['差值'] = df['税收'] - df['税收'].shift(5)
+
+    df = pd.pivot_table(df, values='差值', index='日期', columns='场')
+
+    df['总和'] = df.apply(lambda x: x.sum(), axis=1)
+    df.reset_index(inplace=True)
+
+    df.rename(columns={'猜猜乐场': '猜猜乐'}, inplace=True)
+
+    df = df[['日期', '红包场', '鱼雷初级场', '鱼雷中级场', '鱼雷高级场', '猜猜乐', '总和']]
+
+    return df.tail(2)
+

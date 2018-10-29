@@ -37,15 +37,16 @@ df2.to_excel(writer, sheet_name='新注册其次占比', index=False)
 df3.tail(2).to_excel(writer, sheet_name='金币产出', index=False)
 df_3.tail(2).to_excel(writer, sheet_name='金币消耗', index=False)
 
+df8.to_excel(writer, sheet_name='回收比', index=False)
+
 df4.tail(2).to_excel(writer, sheet_name='宝石分类', index=False)
 df_4.to_excel(writer, sheet_name='宝石明细', index=False)
 
 df5.to_excel(writer, sheet_name='奖品发放')
 
-df6.to_excel(writer, sheet_name='我要赚钱', index=False)
-
 df7.tail(2).to_excel(writer, sheet_name='税收', index=False)
 
-df8.to_excel(writer, sheet_name='回收比', index=False)
+df6.to_excel(writer, sheet_name='我要赚钱', index=False)
+
 
 writer.save()
