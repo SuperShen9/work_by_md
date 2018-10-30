@@ -28,7 +28,7 @@ def run8():
 
 
 def run7():
-    df = du_excel('税收test')
+    df = du_excel('税收')
 
     df['日期'] = df['日期'].apply(lambda x: str(x)[:10])
     df['差值'] = df['税收'] - df['税收'].shift(5)

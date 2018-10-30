@@ -40,7 +40,7 @@ def run1():
 
 
     df_out.reset_index(inplace=True)
-    df_out.rename(columns={'index':'类型'},inplace=True)
+    df_out.rename(columns={'index':'类型','Flag':'类型'},inplace=True)
 
     print('\n第一个表运行完毕……')
 

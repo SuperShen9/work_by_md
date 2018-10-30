@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_excel('C:\\Users\Administrator\Desktop\充值1023.xlsx')
+df = pd.read_excel('C:\\Users\Administrator\Desktop\充值28.xls')
 
 df['date'] = df['pay_time'].apply(lambda x: pd.to_datetime(x.split(' ')[0]))
 

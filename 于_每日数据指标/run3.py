@@ -19,6 +19,19 @@ def run3():
         print('\n缺少运行数据，请先下载……')
         exit()
 
+
+    df3=df[df.columns[:3]]
+    df3.dropna(axis=0, how='any', inplace=True)
+    df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
+    df3 = df3[['每日登录抽奖', 'VIP奖励','新手礼包', '成就任务',  '分享抽奖']]
+    df3.reset_index(inplace=True)
+    df3 = df3[df3['时间'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
+
+    df3['时间'] = df3['时间'].apply(lambda x: str(x)[:10])
+
+
+    '-----------------金币消耗汇总表--------------'
+
     # 金币消耗-透视
     df2 = df[df.columns[-3:]]
     df2.dropna(axis=0, how='any', inplace=True)
@@ -28,7 +41,7 @@ def run3():
     df2['时间2'] = df2['时间2'].apply(lambda x: str(x)[:10])
 
 
-
+    '----------------------------金币产出汇总表--------------------------'
     # 金币产出-透视
     df = df[df.columns[:3]]
     df_map = df_map[['原因', 'jinbi']]
@@ -51,13 +64,13 @@ def run3():
 
     print('\n第三个表运行完毕……')
 
-    return df, df2
+
+
+    return df, df2,df3
+
+run3()
 # print(df)
 # print('-' * 100)
 # print(df2)
 # exit()
 
-# writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\金币分类_OUT.xlsx')
-# df.tail(2).to_excel(writer, sheet_name='金币产出', index=False)
-# df2.tail(2).to_excel(writer, sheet_name='金币消耗', index=False)
-# writer.save()

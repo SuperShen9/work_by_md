@@ -19,7 +19,7 @@ from run7 import run7,run8
 
 df1 = run1()
 df2 = run2()
-df3, df_3 = run3()
+df3, df_3,df_3_3 = run3()
 df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
@@ -36,6 +36,7 @@ df2.to_excel(writer, sheet_name='新注册其次占比', index=False)
 
 df3.tail(2).to_excel(writer, sheet_name='金币产出', index=False)
 df_3.tail(2).to_excel(writer, sheet_name='金币消耗', index=False)
+df_3_3.tail(2).to_excel(writer, sheet_name='金币系统赠送', index=False)
 
 df8.to_excel(writer, sheet_name='回收比', index=False)
 

@@ -27,7 +27,13 @@ c3 = 3.968
 # c3 = 1.768
 
 # 读取方案数据
-df = pd.read_excel('C:\\Users\Administrator\Desktop\闲玩4期.xlsx')
+df = pd.DataFrame([[10, 25, 65, 150, 350, 550, 950, 2500, 5500, 9500, 18500, 38500, 88500]
+                      , [0.5, 1.2, 2, 4, 8, 10, 15, 50, 100, 150, 300, 700, 2000]]).T
+
+df.columns = ['数量', '广告主单价']
+
+df['奖励红宝石'] = df['广告主单价'] * 10
+
 
 # 划分档位函数
 def fx_d(x):
@@ -36,11 +42,10 @@ def fx_d(x):
     else:
         return 2
 
-# 设置奖励红宝石规则
-df['奖励红宝石'] = df['广告主单价'] * 10
 
 # 划分档位
 df['档位'] = df['数量'].apply(lambda x: fx_d(x))
+
 
 # 领取次数划分函数
 def fx(x):
@@ -55,6 +60,7 @@ def fx(x):
             return x / 2
         else:
             return (x + 1) / 2
+
 
 # 划分领取次数
 df['领取次数'] = (df['数量'].apply(lambda x: int(fx(x)))).apply(lambda x: int(x))
@@ -82,12 +88,6 @@ df['利润'] = round(df['收入'] - df['支出'], 2)
 # 累加利润
 df['累加利润'] = round(df['利润'].cumsum(), 2)
 
+print(list(df['利润']))
 
-del df['人数']
-del df['应付金额']
-del df['广告主单价']
-
-# print(df)
-# exit()
-
-df.to_excel('C:\\Users\Administrator\Desktop\方案优化_运算.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\方案.xlsx', index=False)
