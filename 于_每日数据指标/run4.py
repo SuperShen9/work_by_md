@@ -70,10 +70,7 @@ def run4():
     return df, df2
 
 
+if __name__ == '__main__':
+    run4()
 
 
-# # 数据导出
-# writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\红宝石_OUT.xlsx')
-# df.to_excel(writer, sheet_name='宝石分类', index=False)
-# df2.to_excel(writer, sheet_name='宝石明细', index=False)
-# writer.save()

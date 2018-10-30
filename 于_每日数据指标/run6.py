@@ -46,5 +46,7 @@ def run6():
 
     return df
 
+if __name__ == '__main__':
+    run6()
 
-# df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\我要赚钱_OUT.xlsx', index=False)
+

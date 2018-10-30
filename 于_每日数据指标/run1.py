@@ -47,4 +47,5 @@ def run1():
     return df_out
 
 
-
+if __name__ == '__main__':
+    run1()

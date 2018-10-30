@@ -44,3 +44,5 @@ def run7():
 
     return df.tail(2)
 
+if __name__ == '__main__':
+    run7()

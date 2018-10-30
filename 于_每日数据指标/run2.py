@@ -78,5 +78,6 @@ def run2():
     return df_form
 
 
-
+if __name__ == '__main__':
+    run2()
 

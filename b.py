@@ -9,4 +9,8 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-print(12131)
+
+
+from a import run
+
+run()

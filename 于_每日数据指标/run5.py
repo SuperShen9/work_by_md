@@ -38,4 +38,6 @@ def run5():
 
     return df
 
-# df.to_excel('C:\\Users\Administrator\Desktop\表格提取源\奖品发放_OUT.xlsx')
+if __name__ == '__main__':
+    run5()
+

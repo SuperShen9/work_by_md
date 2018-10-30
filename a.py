@@ -9,6 +9,10 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-while True:
-    print('aa')
-    time.sleep(3)
+def run():
+    print(123)
+
+run()
+
+if __name__=='__main__':
+    run()
