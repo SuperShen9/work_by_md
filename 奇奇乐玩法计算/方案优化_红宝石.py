@@ -6,8 +6,10 @@ import pandas as pd
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
+import datetime
 warnings.filterwarnings('ignore')
+
+min = datetime.datetime.now().strftime('%M')
 
 p1 = 776
 p2 = 6984
@@ -18,17 +20,18 @@ h2 = 20
 h3 = 100
 
 # # 闲玩安卓第四期 0.08
-c1 = 0.1104
-c2 = 1.104
-c3 = 3.968
-
 # c1 = 0.1104
-# c2 = 0.904
-# c3 = 1.768
+# c2 = 1.104
+# c3 = 3.968
+
+# 0.06税率
+c1 = 0.0328
+c2 = 0.328
+c3 = 0.4759
 
 # 读取方案数据
-df = pd.DataFrame([[10, 25, 65, 150, 350, 550, 950, 2500, 5500, 9500, 18500, 38500, 88500]
-                      , [0.5, 1.2, 2, 4, 8, 10, 15, 50, 100, 150, 300, 700, 2000]]).T
+df = pd.DataFrame([[30, 100, 250, 500, 1000, 2000, 5000, 10000, 20000, 40000, 100000,200000,400000]
+                 , [0.5, 1, 2, 4, 6, 10, 15, 50, 100, 150, 300, 700, 2000]]).T
 
 df.columns = ['数量', '广告主单价']
 
@@ -89,5 +92,6 @@ df['利润'] = round(df['收入'] - df['支出'], 2)
 df['累加利润'] = round(df['利润'].cumsum(), 2)
 
 print(list(df['利润']))
+# exit()
 
-df.to_excel('C:\\Users\Administrator\Desktop\方案.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\方案{}.xlsx'.format(min), index=False)
