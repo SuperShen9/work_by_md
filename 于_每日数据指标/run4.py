@@ -11,6 +11,10 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+import datetime
+today = datetime.date.today()
+bef_yesterday = today - datetime.timedelta(days=2)
+
 def run4():
 
     df = du_excel('红宝石')
@@ -24,7 +28,7 @@ def run4():
     df = df[
         ['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '分享抽奖', '玩家兑换红包', '玩家兑换话费', '玩家兑换金币', '幸运抽奖', '购买物品', '欢乐夺宝']]
 
-    df = df[df['时间'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
+    df = df[df['时间'] >= pd.to_datetime('{}'.format(bef_yesterday))]
 
     df['时间'] = df['时间'].apply(lambda x: str(x)[:10])
 
@@ -63,7 +67,7 @@ def run4():
 
     df2 = df_ren.append(df_money)
 
-    df2 = df2[df2['日期'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
+    df2 = df2[df2['日期'] >= pd.to_datetime('{}'.format(bef_yesterday))]
     df2['日期'] = df2['日期'].apply(lambda x: str(x)[:10])
     print('\n第四个表运行完毕……')
 

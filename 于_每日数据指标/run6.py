@@ -2,22 +2,28 @@
 # author：Super.Shen
 
 import pandas as pd
-import numpy as np
-from Func import gb, ri_y, nian, yue, df_cut, ri_y2
 from Func import du_old_excel
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
 warnings.filterwarnings('ignore')
+
+import datetime
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
+bef_yesterday = today - datetime.timedelta(days=2)
 
 def run6():
     df=du_old_excel('我要赚钱')
+
 
     df['奖励一状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
     df['奖励二状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
     df['奖励三状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
     df['time'] = df['关系建立时间'].apply(lambda x: x.split(' ')[0])
+
+    print(df)
+    exit()
 
     df1 = df.groupby(['time'])['奖励一状态'].sum()
     df2 = df.groupby(['time'])['奖励二状态'].sum()
@@ -30,7 +36,10 @@ def run6():
     df.reset_index(inplace=True)
     df['day'] = df['time'].apply(lambda x: int(x.split('/')[-1]))
 
-    df = df[(df['day'] >= int(ri_y2)) & (df['day'] <= int(ri_y))]
+    df = df[(df['day'] >= int(str(bef_yesterday)[-2:])) & (df['day'] <= int(str(yesterday)[-2:]))]
+
+
+
 
     df.rename(columns={'Unnamed 0': '总和'}, inplace=True)
 

@@ -10,6 +10,11 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+import datetime
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
+bef_yesterday = today - datetime.timedelta(days=2)
+
 def run2():
     try:
         # 读取数据
@@ -20,11 +25,12 @@ def run2():
         exit()
 
     # 提取日期
-    df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[-1])
+    df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
+
 
     # df和df2重新赋值
-    df2 = df[df['day'] == ri_y]
-    df = df[df['day'] == ri_y2]
+    df2 = df[df['day'] == str(yesterday)[-2:]]
+    df = df[df['day'] == str(bef_yesterday)[-2:]]
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
@@ -44,7 +50,7 @@ def run2():
 
     def df_f(df):
         # df_form.loc[i, '平台'] = '奇奇乐'
-        df_form.loc[i, '日期'] = '{}/{}/{}'.format(nian, yue, ri_y2)
+        df_form.loc[i, '日期'] = '{}'.format(bef_yesterday)
 
         # 人数计算
         df_form.loc[i, '新用户量'] = len(df[df['Flag'] == 'new']['player_id'].unique())
@@ -79,5 +85,6 @@ def run2():
 
 
 if __name__ == '__main__':
-    run2()
+    df = run2()
+    print(df)
 

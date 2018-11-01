@@ -10,6 +10,10 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+import datetime
+today = datetime.date.today()
+bef_yesterday = today - datetime.timedelta(days=2)
+
 
 def run3():
     try:
@@ -25,7 +29,7 @@ def run3():
     df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
     df3 = df3[['每日登录抽奖', 'VIP奖励', '新手礼包', '成就任务', '分享抽奖']]
     df3.reset_index(inplace=True)
-    df3 = df3[df3['时间'] >= pd.to_datetime('{}{}{}'.format(nian, yue, ri_y2))]
+    df3 = df3[df3['时间'] >= pd.to_datetime('{}'.format(bef_yesterday))]
 
     df3['时间'] = df3['时间'].apply(lambda x: str(x)[:10])
 
