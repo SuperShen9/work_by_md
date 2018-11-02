@@ -24,13 +24,23 @@ def run2():
         print('\n缺少运行数据，请先下载……')
         exit()
 
-    # 提取日期
+    # 提取充值数据的日期
     df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
 
+    # #监测第一步
+    # df.to_excel('C:\\Users\Administrator\Desktop\\数据监测—step1.xlsx', index=False)
+    # print(df.head())
+    # exit()
 
     # df和df2重新赋值
-    df2 = df[df['day'] == str(yesterday)[-2:]]
+    df2 = df[df['day'] == str(int(str(yesterday)[-2:]))]
     df = df[df['day'] == str(bef_yesterday)[-2:]]
+
+    ## 监测第二步
+    # print(str(yesterday)[-2:])
+    # print(df2.head())
+    # exit()
+
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
@@ -44,6 +54,7 @@ def run2():
     df2['Flag'].fillna('old', inplace=True)
 
     # df.to_excel('C:\\Users\Administrator\Desktop\\NEW_T.xlsx', index=False)
+    # exit()
 
     i = 0
     df_form = pd.DataFrame()
@@ -80,7 +91,7 @@ def run2():
     del df_form['总用户量']
     del df_form['总消费']
 
-    print('\n第二个表运行完毕……')
+    print('\n第二个表【新注册用户次日消费】运行完毕……')
     return df_form
 
 

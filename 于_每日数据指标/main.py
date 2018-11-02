@@ -2,6 +2,9 @@
 # author：Super.Shen
 
 import pandas as pd
+import datetime
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
@@ -15,7 +18,7 @@ from run3 import run3
 from run4 import run4
 from run5 import run5
 from run6 import run6
-from run7 import run7,run8
+from run7 import run7,run8,run9
 
 df1 = run1()
 df2 = run2()
@@ -25,12 +28,16 @@ df5 = run5()
 df6 = run6()
 df7 = run7()
 df8 = run8()
+df9 = run9()
 
 # print(df8)
 # exit()
 
 # 数据导出
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\表格提取源\All_OUT.xlsx')
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\All_OUT_{}.xlsx'.format(yesterday))
+
+df9.to_excel(writer, sheet_name='渠道', index=False)
+
 df1.to_excel(writer, sheet_name='充值支付类型占比', index=False)
 df2.to_excel(writer, sheet_name='新注册其次占比', index=False)
 

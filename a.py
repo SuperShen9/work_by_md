@@ -10,7 +10,11 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import datetime
+
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
 
-print(today,yesterday)
+
+day = datetime.datetime.now().strftime('%d')
+print(day)
+print(int(day))
