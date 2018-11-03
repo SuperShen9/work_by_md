@@ -15,12 +15,14 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # file_path = 'D:\MD_DATA\\0930数据\统计数据读取'
-file_path ='D:\MD_DATA\\0930数据\统计数据读取\备用'
+file_path ='C:\\Users\Administrator\Desktop\\new'
 os.chdir(file_path)
 
 df_all = pd.DataFrame()
 for x, y, z in os.walk(file_path):
     for file in z:
+        print(file)
+        exit()
         wb = xlrd.open_workbook(file)
         sheets = wb.sheet_names()
         for i in range(len(sheets)):
@@ -35,4 +37,4 @@ for x, y, z in os.walk(file_path):
         df_all = df_all[df_all['当日DAU'].notnull()]
         df_all.fillna(method='bfill', inplace=True)
 
-df_all.to_excel('C:\\Users\Administrator\Desktop\T0930-2.xlsx', index=False)
+df_all.to_excel('C:\\Users\Administrator\Desktop\T7', index=False)

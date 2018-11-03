@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-from Func import du_old_excel, append_excel
+from Func import du_old_excel, du_excel
 import datetime
 
 
@@ -53,21 +53,18 @@ def run1():
     df['次数占比'] = df['充值次数'] / (df['充值次数'].sum())
     df['金额占比'] = df['充值金额'] / (df['充值金额'].sum())
 
-    print(df)
+    print('第一个表运行完毕')
 
     return df
 
-
-# df1=run1()
-# exit()
 
 # 新注册用户当日消费情况
 def run2():
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\充值.xls')
-        df2 = pd.read_excel('C:\\Users\Administrator\Desktop\数据合并\\注册16.xlsx')
-        df3 = pd.read_excel('C:\\Users\Administrator\Desktop\数据合并\\注册30.xls')
+        df = du_old_excel('充值')
+        df2 = du_excel('注册16')
+        df3 = du_excel('注册30')
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
         exit()
@@ -84,10 +81,6 @@ def run2():
     df3['day'] = df3['注册时间'].apply(lambda x: x.split(' ')[0].split('/')[2])
     df3['on'] = df3['player_id'].apply(lambda x: str(x)) + '|' + df3['day']
     df3 = df3[['on', 'Flag']]
-
-    # print(df.head())
-    # print(df3.head())
-    # exit()
 
     df = pd.merge(left=df, right=df3, on='on', how='left')
     df['Flag'].fillna('old', inplace=True)
@@ -115,17 +108,16 @@ def run2():
     del df_form['总用户量']
     del df_form['总消费']
 
-    print(df_form)
+    print('第二个表运行完毕.')
+
     return df_form
 
-
-# df2 = run2()
 
 # 月度金币产生消耗占比
 def run3():
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\金币.xlsx')
+        df = du_excel('金币')
         df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
@@ -138,7 +130,8 @@ def run3():
 
     df3.reset_index(inplace=True)
 
-    df3['时间'] = df3['时间'].apply(lambda x: str(x)[:10])
+    df3=pd.DataFrame(df3.sum()).T
+
 
     '-----------------金币消耗汇总表--------------'
 
@@ -147,8 +140,10 @@ def run3():
     df2.dropna(axis=0, how='any', inplace=True)
     df2 = pd.pivot_table(df2, values='数值2', index='时间2', columns='原因2')
     del df2['单局结算']
-    df2.reset_index(inplace=True)
-    df2['时间2'] = df2['时间2'].apply(lambda x: str(x)[:10])
+    df2.reset_index(drop=True,inplace=True)
+
+    df2 = pd.DataFrame(df2.sum()).T
+
 
     '----------------------------金币产出汇总表--------------------------'
     # 金币产出-透视
@@ -169,19 +164,20 @@ def run3():
     df.reset_index(inplace=True)
 
     df = df[['时间', '用户充值', '系统赠送', '兑换红宝石', '兑换鱼雷', '领取邮件']]
-    df['时间'] = df['时间'].apply(lambda x: str(x)[:10])
 
-    print('\n第三个表运行完毕……')
+    df.reset_index(drop=True, inplace=True)
+
+    df = pd.DataFrame(df.sum()).T
+
+    print('第三个表运行完毕.')
 
     return df, df2, df3
 
 
-# df3, df_3,df_3_3 = run3()
-
 # 月度红宝石计算
 def run4():
-    df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\红宝石.xlsx')
-    df2 = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\红宝石明细.xlsx')
+    df = du_excel('红宝石')
+    df2 = du_excel('红宝石明细')
 
     '----------------------计算第一个表----------------------------------------------------------'
 
@@ -211,9 +207,9 @@ def run4():
     def hongbaoshi_minxi(df2):
         df2['总和'] = df2.apply(lambda x: x.sum(), axis=1)
 
-        df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % x)
-        df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % x)
-        df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % x)
+        df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
 
         df2 = df2[['第一档', '第二档', '第三档', '一档比', '二档比', '三档比', '总和']]
         df2.reset_index(inplace=True)
@@ -222,13 +218,14 @@ def run4():
 
     df2 = hongbaoshi_minxi(df2)
 
+    print('第四个表运行完毕.')
+
     return df, df2
 
 
-# df4, df_4 = run4()
-
+# 奖品发放
 def run5():
-    df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\奖品发放.xls')
+    df = du_old_excel('奖品发放')
 
     df['奖励'] = df['金额'].apply(lambda x: str(x) + '元') + df['类型']
 
@@ -246,52 +243,55 @@ def run5():
 
     df['总和'] = df.apply(lambda x: x.sum(), axis=1)
 
+    print('第五个表运行完毕.')
     return df
 
 
-# df5 = run5()
-
-
+# 月度推广计算
 def run6():
     df = du_old_excel('我要赚钱')
 
     df['奖励一状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
     df['奖励二状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
     df['奖励三状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
-    or_num=df.shape[0]
+    or_num = df.shape[0]
     df = pd.DataFrame(df.sum()).T
 
     df = df[['奖励一状态', '奖励二状态', '奖励三状态']]
 
-    df['总和']=or_num
+    df['总和'] = or_num
 
-
-    df['一档完成率'] = (df['奖励一状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))
-    df['二档完成率'] = (df['奖励二状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))
-    df['三档完成率'] = (df['奖励三状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))
+    df['一档完成率'] = (df['奖励一状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
+    df['二档完成率'] = (df['奖励二状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
+    df['三档完成率'] = (df['奖励三状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
 
     df = df[['奖励一状态', '奖励二状态', '奖励三状态', '一档完成率', '二档完成率', '三档完成率', '总和']]
 
-    print('\n第六个表运行完毕……')
+    print('第六个表运行完毕.')
 
     return df
 
-df6 = run6()
 
+df1 = run1()
+df2 = run2()
+df3, df_3, df_3_3 = run3()
+df4, df_4 = run4()
+df5 = run5()
+df6 = run6()
 
 # # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\月报材料.xlsx')
-# df1.to_excel(writer, sheet_name='充值支付类型', index=False)
-# df2.to_excel(writer, sheet_name='新用户消费占比', index=False)
+df1.to_excel(writer, sheet_name='充值支付类型', index=False)
+df2.to_excel(writer, sheet_name='新用户消费占比', index=False)
 
-# df3.to_excel(writer, sheet_name='金币产出', index=False)
-# df_3.to_excel(writer, sheet_name='金币消耗', index=False)
-# df_3_3.to_excel(writer, sheet_name='金币系统赠送', index=False)
+df3.to_excel(writer, sheet_name='金币产出', index=False)
+df_3.to_excel(writer, sheet_name='金币消耗', index=False)
+df_3_3.to_excel(writer, sheet_name='金币系统赠送', index=False)
 
-# df4.tail(2).to_excel(writer, sheet_name='宝石分类', index=False)
-# df_4.to_excel(writer, sheet_name='宝石明细', index=False)
+df4.to_excel(writer, sheet_name='宝石分类', index=False)
+df_4.to_excel(writer, sheet_name='宝石明细', index=False)
 
-# df5.to_excel(writer, sheet_name='奖品发放')
+df5.to_excel(writer, sheet_name='奖品发放')
 
 df6.to_excel(writer, sheet_name='我要赚钱', index=False)
 
