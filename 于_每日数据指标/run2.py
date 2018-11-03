@@ -34,11 +34,13 @@ def run2():
 
     # df和df2重新赋值
     df2 = df[df['day'] == str(int(str(yesterday)[-2:]))]
-    df = df[df['day'] == str(bef_yesterday)[-2:]]
 
-    ## 监测第二步
+    # 注册人数df
+    df = df[df['day'] ==  str(int(str(bef_yesterday)[-2:]))]
+
+    # 监测第二步
     # print(str(yesterday)[-2:])
-    # print(df2.head())
+    # print(df.head())
     # exit()
 
 
