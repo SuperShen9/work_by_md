@@ -51,7 +51,8 @@ def append_excel(file_path):
 def du_excel(excel_name):
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\{}.xlsx'.format(excel_name))
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\周报数据\\{}.xlsx'.format(excel_name))
+        # df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\{}.xlsx'.format(excel_name))
         return df
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
@@ -61,7 +62,8 @@ def du_excel(excel_name):
 def du_old_excel(excel_name):
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\{}.xls'.format(excel_name))
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\周报数据\\{}.xls'.format(excel_name))
+        # df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\{}.xls'.format(excel_name))
         return df
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
