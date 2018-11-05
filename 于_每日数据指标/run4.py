@@ -11,9 +11,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-import datetime
-today = datetime.date.today()
-bef_yesterday = today - datetime.timedelta(days=2)
+from Func import bef_yesterday
 
 def run4():
 

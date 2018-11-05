@@ -2,15 +2,15 @@
 # author：Super.Shen
 
 import pandas as pd
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
+
 warnings.filterwarnings('ignore')
 
-import datetime
-today = datetime.date.today()
-yesterday = today - datetime.timedelta(days=1)
-bef_yesterday = today - datetime.timedelta(days=2)
+from Func import yesterday, bef_yesterday
+
 
 def run2():
     try:
@@ -39,7 +39,6 @@ def run2():
     # print(str(yesterday)[-2:])
     # print(df.head())
     # exit()
-
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
@@ -82,19 +81,16 @@ def run2():
 
         return df_form
 
-
     df_form = df_f(df)
-
 
     # 删除多余2列
     del df_form['总用户量']
     del df_form['总消费']
 
-    print('\n第二个表【新注册用户次日消费】运行完毕……')
+    print('\n第二个表运行完毕……')
     return df_form
 
 
 if __name__ == '__main__':
     df = run2()
     print(df)
-

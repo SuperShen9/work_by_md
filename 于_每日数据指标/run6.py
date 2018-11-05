@@ -10,13 +10,6 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-import datetime
-
-today = datetime.date.today()
-yesterday = today - datetime.timedelta(days=1)
-bef_yesterday = today - datetime.timedelta(days=2)
-
-
 def run6():
     df = du_old_excel('我要赚钱')
 
