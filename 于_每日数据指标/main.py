@@ -3,8 +3,11 @@
 
 import pandas as pd
 import datetime
+
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
+
+import os
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
@@ -18,11 +21,11 @@ from run3 import run3
 from run4 import run4
 from run5 import run5
 from run6 import run6
-from run7 import run7,run8,run9
+from run7 import run7, run8, run9
 
 df1 = run1()
 df2 = run2()
-df3, df_3,df_3_3 = run3()
+df3, df_3, df_3_3 = run3()
 df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
@@ -56,5 +59,12 @@ df7.tail(2).to_excel(writer, sheet_name='税收', index=False)
 
 df6.to_excel(writer, sheet_name='我要赚钱', index=False)
 
-
 writer.save()
+
+file1 = 'C:\\Users\Administrator\Desktop\\{}数据'.format(today)
+list1 = [file1, ]
+for i in list1:
+    if os.path.exists(i):
+        print('\n{}已创建文件！'.format(today))
+    else:
+        os.mkdir(i)

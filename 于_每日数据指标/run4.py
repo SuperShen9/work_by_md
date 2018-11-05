@@ -3,7 +3,7 @@
 
 import pandas as pd
 import numpy as np
-from Func import du_excel, ri_y2, nian, yue
+from Func import du_excel
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)

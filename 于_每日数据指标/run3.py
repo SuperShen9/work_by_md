@@ -2,8 +2,6 @@
 # author：Super.Shen
 
 import pandas as pd
-from Func import gb, ri_y, nian, yue, df_cut, ri_y2
-
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings

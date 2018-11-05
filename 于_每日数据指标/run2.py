@@ -2,12 +2,9 @@
 # author：Super.Shen
 
 import pandas as pd
-from Func import gb, ri_y, nian, yue, df_cut, ri_y2
-
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
 warnings.filterwarnings('ignore')
 
 import datetime
@@ -18,8 +15,8 @@ bef_yesterday = today - datetime.timedelta(days=2)
 def run2():
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\充值2天.xls'.format(ri_y))
-        df3 = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\注册.xls'.format(ri_y2))
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\充值2天.xls')
+        df3 = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\\注册.xls')
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
         exit()

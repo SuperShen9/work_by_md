@@ -11,7 +11,6 @@ warnings.filterwarnings('ignore')
 
 
 def run1():
-
     try:
         # 读取数据
         df = pd.read_excel('C:\\Users\Administrator\Desktop\每日数据分析\充值2天.xls')
@@ -36,12 +35,13 @@ def run1():
     df_out.fillna(0, inplace=True)
     df_out.sort_values(by=df_out.columns[-1], ascending=0, inplace=True)
 
-    df_out[df_out.columns[0][-2:]+'号比例'] = df_out[df_out.columns[0]].apply(lambda x: '%.2f%%'%(x / df_out[df_out.columns[0]].sum()*100))
-    df_out[df_out.columns[1][-2:]+'号比例'] = df_out[df_out.columns[1]].apply(lambda x: '%.2f%%'%(x / df_out[df_out.columns[1]].sum()*100))
-
+    df_out[df_out.columns[0][-2:] + '号比例'] = df_out[df_out.columns[0]].apply(
+        lambda x: '%.2f%%' % (x / df_out[df_out.columns[0]].sum() * 100))
+    df_out[df_out.columns[1][-2:] + '号比例'] = df_out[df_out.columns[1]].apply(
+        lambda x: '%.2f%%' % (x / df_out[df_out.columns[1]].sum() * 100))
 
     df_out.reset_index(inplace=True)
-    df_out.rename(columns={'index':'类型','Flag':'类型'},inplace=True)
+    df_out.rename(columns={'index': '类型', 'Flag': '类型'}, inplace=True)
 
     print('\n第一个表运行完毕……')
 
