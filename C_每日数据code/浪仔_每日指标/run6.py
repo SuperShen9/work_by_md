@@ -37,6 +37,7 @@ def run6():
 
     df.rename(columns={'Unnamed 0': '总和'}, inplace=True)
 
+
     df['一档完成率'] = (df['奖励一状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))
     df['二档完成率'] = (df['奖励二状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))
     df['三档完成率'] = (df['奖励三状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x*100))

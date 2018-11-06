@@ -51,11 +51,13 @@ def run4():
         df2 = pd.pivot_table(df2, values=value, index='日期', columns='档位', aggfunc=np.sum)
         df2['总和'] = df2.apply(lambda x: x.sum(), axis=1)
 
-        df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
-        df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
-        df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        # df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        # df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        # df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
 
-        df2 = df2[['第一档', '第二档', '第三档', '一档比', '二档比', '三档比', '总和']]
+        # df2 = df2[['第一档', '第二档', '第三档', '一档比', '二档比', '三档比', '总和']]
+
+        df2 = df2[['第一档', '第二档', '第三档', '总和']]
         df2.reset_index(inplace=True)
 
         return df2
@@ -66,6 +68,7 @@ def run4():
     df_money = hongbaoshi_minxi(df2, '总额')
 
     df2 = df_ren.append(df_money)
+
 
     df2 = df2[df2['日期'] >= pd.to_datetime('{}'.format(bef_yesterday))]
     df2['日期'] = df2['日期'].apply(lambda x: str(x)[:10])

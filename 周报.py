@@ -14,6 +14,7 @@ import datetime
 
 print('\n########请注意Func中的读取修改！###########\n')
 
+
 def fx(x):
     nian = int(x.split('/')[0])
     yue = int(x.split('/')[1])
@@ -127,8 +128,7 @@ def run3():
 
     df3.reset_index(inplace=True)
 
-    df3=pd.DataFrame(df3.sum()).T
-
+    df3 = pd.DataFrame(df3.sum()).T
 
     '-----------------金币消耗汇总表--------------'
 
@@ -137,10 +137,9 @@ def run3():
     df2.dropna(axis=0, how='any', inplace=True)
     df2 = pd.pivot_table(df2, values='数值2', index='时间2', columns='原因2')
     del df2['单局结算']
-    df2.reset_index(drop=True,inplace=True)
+    df2.reset_index(drop=True, inplace=True)
 
     df2 = pd.DataFrame(df2.sum()).T
-
 
     '----------------------------金币产出汇总表--------------------------'
     # 金币产出-透视
@@ -204,9 +203,9 @@ def run4():
     def hongbaoshi_minxi(df2):
         df2['总和'] = df2.apply(lambda x: x.sum(), axis=1)
 
-        df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
-        df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
-        df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x*100))
+        df2['一档比'] = (df2['第一档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x * 100))
+        df2['二档比'] = (df2['第二档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x * 100))
+        df2['三档比'] = (df2['第三档'] / df2['总和']).apply(lambda x: '%.2f%%' % (x * 100))
 
         df2 = df2[['第一档', '第二档', '第三档', '一档比', '二档比', '三档比', '总和']]
         df2.reset_index(inplace=True)
@@ -269,14 +268,39 @@ def run6():
     return df
 
 
+def run7():
+    df = du_excel('税收')
+
+    df['差值'] = df['税收'] - df['税收'].shift(30)
+
+    df=df.tail(5)
+
+    df = pd.pivot_table(df, values='差值', index='日期', columns='场')
+
+
+
+    df['总和'] = df.apply(lambda x: x.sum(), axis=1)
+
+    df.rename(columns={'猜猜乐场': '猜猜乐'}, inplace=True)
+
+    df = df[['红包场', '鱼雷初级场', '鱼雷中级场', '鱼雷高级场', '猜猜乐', '总和']]
+
+    print('第七个表【税收】运行完毕……')
+
+
+    return df
+
+# df7 = run7()
+# exit()
+
+
 df1 = run1()
 df2 = run2()
 df3, df_3, df_3_3 = run3()
 df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
-
-
+df7 = run7()
 
 # # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\周报材料.xlsx')
@@ -293,5 +317,8 @@ df_4.to_excel(writer, sheet_name='宝石明细', index=False)
 df5.to_excel(writer, sheet_name='奖品发放', index=False)
 
 df6.to_excel(writer, sheet_name='我要赚钱', index=False)
+
+df7.to_excel(writer, sheet_name='税收', index=False)
+
 
 writer.save()
