@@ -11,13 +11,9 @@ warnings.filterwarnings('ignore')
 from Func import bef_yesterday, du_old_excel,du_excel
 
 def run3():
-    try:
-        # 读取数据
-        df = du_excel('金币分类')
-        df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+
+    df = du_excel('金币分类')
+    df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)

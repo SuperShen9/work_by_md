@@ -13,13 +13,9 @@ from Func import yesterday, bef_yesterday
 
 
 def run2():
-    try:
-        # 读取数据
-        df = du_old_excel('充值2天')
-        df3 = du_old_excel('注册')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+
+    df = du_old_excel('充值2天')
+    df3 = du_old_excel('注册')
 
     # 提取充值数据的日期
     df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
