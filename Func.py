@@ -14,8 +14,10 @@ warnings.filterwarnings('ignore')
 # 格式是时间戳
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
+day= datetime.datetime.now().strftime('%d')
 hour = datetime.datetime.now().strftime('%H')
 min = datetime.datetime.now().strftime('%M')
+
 
 
 T_line = 35

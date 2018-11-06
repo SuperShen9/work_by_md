@@ -2,9 +2,8 @@
 # author：Super.Shen
 
 import pandas as pd
-
-pd.set_option('expand_frame_repr', False)
-pd.set_option('display.max_rows', 1000)
+import numpy as np
+from Func import day
 import warnings
 
 warnings.filterwarnings('ignore')
@@ -12,10 +11,10 @@ warnings.filterwarnings('ignore')
 from Func import append_excel
 
 # 读取每日登入用户并合并
-df = append_excel('C:\\Users\Administrator\Desktop\数据合并')
+df = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\登入数据')
 
-df_cz = pd.read_excel('C:\\Users\Administrator\Desktop\充值.xls')
-df_zc = pd.read_excel('C:\\Users\Administrator\Desktop\注册.xls')
+df_cz = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\充值数据')
+df_zc = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\注册数据')
 
 # 【充值表】生成：去重列
 df_cz['time'] = df_cz['pay_time'].apply(lambda x: str(x)[:10])
@@ -44,13 +43,36 @@ df['time'] = df['login_time'].apply(lambda x: str(x)[:10])
 df = pd.merge(left=df, right=df_cz, on='player_id', how='left')
 
 # gb数据用于透视
-df = pd.DataFrame(df.groupby(['time','flag']).size())
+df = pd.DataFrame(df.groupby(['time', 'flag']).size())
 df.reset_index(inplace=True)
 
 # 做透视
 df = pd.pivot_table(df, values=0, index='time', columns='flag')
 df.reset_index(inplace=True)
-df.rename(columns={''})
+
+list1 = []
+for n in range(len(list(df.columns))):
+    if n == 0:
+        list1.append('登入时间')
+    else:
+        list1.append(list(df.columns)[n].strip()[5:] + '用户')
 
 
-df.to_excel('C:\\Users\Administrator\Desktop\\text.xlsx')
+df.columns = list1
+
+# 计算每日变化比例
+df_a = df[df.columns[1:]].fillna(0)
+df_b = df[df.columns[1:]].shift(1).fillna(0)
+
+df_c = (df_a - df_b) / df_b
+df_c['登入时间'] = df['登入时间']
+
+df_c = df_c[['登入时间'] + list(df_c.columns[:-1])]
+
+df_c.replace(np.inf, np.nan, inplace=True)
+
+
+# 输出数据
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\奇奇乐{}日付费新用户留存统计.xlsx'.format(day))
+df.to_excel(writer, sheet_name='每日更新数据', index=False)
+df_c.to_excel(writer, sheet_name='变化比例', index=False)

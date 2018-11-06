@@ -15,6 +15,7 @@ def run3():
     df = du_excel('金币分类')
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 
+
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)
     df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
