@@ -23,14 +23,21 @@ def run5():
 
     df = pd.pivot_table(df, values=0, index='日期', columns='奖励')
 
-    try:
-        df = df[['2元红包', '5元红包', '8元红包', '10元红包', '10元话费', '100元话费']]
+    list1 = ['2元红包', '5元红包', '8元红包', '10元红包', '20元红包', '50元红包', '10元话费', '20元话费', '50元话费', '100元话费']
 
+    try:
+        df = df[list1]
     except KeyError:
-        df = df[['2元红包', '5元红包', '8元红包', '10元红包', '10元话费']]
-        df['100元话费'] = 0
+        # 判定红包类型是否存在于list1
+        error = [l for l in list1 if l not in list(df.columns)]
+        # 把不存在的部分保存进df
+        for x in error:
+            df[x] = 0
+        df = df[list1]
+
 
     df.fillna(0, inplace=True)
+
 
     df['总和'] = df.apply(lambda x: x.sum(), axis=1)
 
@@ -38,6 +45,6 @@ def run5():
 
     return df
 
+
 if __name__ == '__main__':
     run5()
-

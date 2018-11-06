@@ -3,6 +3,7 @@
 
 import pandas as pd
 from Func import du_old_excel
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -19,7 +20,9 @@ def run1():
         print('\n缺少运行数据，请先下载……')
         exit()
 
-    df_map = df_map[['product_id', 'Flag']]
+    df_map = df_map[['product_id2', 'Flag2']]
+
+    df_map.rename(columns={'product_id2': 'product_id', 'Flag2': 'Flag'}, inplace=True)
 
     df['time'] = df['pay_time'].apply(lambda x: x.split(' ')[0])
 

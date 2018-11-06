@@ -3,7 +3,9 @@
 
 import pandas as pd
 import datetime
-
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
+bef_yesterday = today - datetime.timedelta(days=2)
 hour = datetime.datetime.now().strftime('%H')
 
 pd.set_option('expand_frame_repr', False)
@@ -11,24 +13,6 @@ pd.set_option('display.max_rows', 1000)
 import warnings
 
 warnings.filterwarnings('ignore')
-
-from datetime import *
-
-time1 = datetime.today()
-nian = str(time1.year)
-yue = str(time1.month)
-ri_y = str(time1.day - 1)
-ri = str(time1.day)
-ri_y2 = str(time1.day - 2)
-
-if len(yue) < 2:
-    yue = '0' + yue
-if len(ri_y) < 2:
-    ri_y = '0' + ri_y
-if len(ri) < 2:
-    ri = '0' + ri
-if len(ri_y2) < 2:
-    ri_y2 = '0' + ri_y2
 
 def du_excel(excel_name):
     try:

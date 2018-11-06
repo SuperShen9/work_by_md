@@ -11,6 +11,7 @@ warnings.filterwarnings('ignore')
 
 from Func import append_excel
 
+# 读取每日登入用户并合并
 df = append_excel('C:\\Users\Administrator\Desktop\数据合并')
 
 df_cz = pd.read_excel('C:\\Users\Administrator\Desktop\充值.xls')
@@ -32,11 +33,24 @@ df_zc = df_zc[['on', 'flag']]
 df_cz = pd.merge(left=df_cz, right=df_zc, on='on', how='left')
 df_cz = df_cz[df_cz['flag'] == 'new']
 df_cz = df_cz[['on', 'flag']]
+df_cz['player_id'] = df_cz['on'].apply(lambda x: int(x.split('|')[1]))
+
+df_cz['flag'] = df_cz['on'].apply(lambda x: x.split('|')[0])
 
 # 【登入表】计算
 df['time'] = df['login_time'].apply(lambda x: str(x)[:10])
-print(df.head())
+
+# 合并【登入表】和【充值用户】
+df = pd.merge(left=df, right=df_cz, on='player_id', how='left')
+
+# gb数据用于透视
+df = pd.DataFrame(df.groupby(['time','flag']).size())
+df.reset_index(inplace=True)
+
+# 做透视
+df = pd.pivot_table(df, values=0, index='time', columns='flag')
+df.reset_index(inplace=True)
+df.rename(columns={''})
 
 
-print(df_cz.head())
-# print(df_zc.head())
+df.to_excel('C:\\Users\Administrator\Desktop\\text.xlsx')
