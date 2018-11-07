@@ -14,16 +14,7 @@ warnings.filterwarnings('ignore')
 
 df = pd.read_excel('C:\\Users\Administrator\Desktop\\text.xlsx')
 
-df_a = df[df.columns[1:]].fillna(0)
-df_b = df[df.columns[1:]].shift(1).fillna(0)
 
-df_c = (df_a - df_b) / df_b
-df_c['登入时间'] = df['登入时间']
-
-df_c = df_c[['登入时间'] + list(df_c.columns[:-1])]
-
-df_c.replace(np.inf, np.nan, inplace=True)
-
-print(df_c)
+print(df)
 # df_c.to_excel('C:\\Users\Administrator\Desktop\\text2.xlsx')
 exit()

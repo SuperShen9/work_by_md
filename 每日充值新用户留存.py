@@ -60,19 +60,25 @@ for n in range(len(list(df.columns))):
 
 df.columns = list1
 
-# 计算每日变化比例
-df_a = df[df.columns[1:]].fillna(0)
-df_b = df[df.columns[1:]].shift(1).fillna(0)
+df.to_excel('C:\\Users\Administrator\Desktop\\text.xlsx', index=False)
 
-df_c = (df_a - df_b) / df_b
-df_c['登入时间'] = df['登入时间']
-
-df_c = df_c[['登入时间'] + list(df_c.columns[:-1])]
-
-df_c.replace(np.inf, np.nan, inplace=True)
-
+print(df)
+exit()
 
 # 输出数据
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\奇奇乐{}日付费新用户留存统计.xlsx'.format(day))
 df.to_excel(writer, sheet_name='每日更新数据', index=False)
-df_c.to_excel(writer, sheet_name='变化比例', index=False)
+
+
+
+# # 计算每日变化比例
+# df_a = df[df.columns[1:]].fillna(0)
+# df_b = df[df.columns[1:]].shift(1).fillna(0)
+#
+# df_c = (df_a - df_b) / df_b
+# df_c['登入时间'] = df['登入时间']
+#
+# df_c = df_c[['登入时间'] + list(df_c.columns[:-1])]
+#
+# df_c.replace(np.inf, np.nan, inplace=True)
+# df_c.to_excel(writer, sheet_name='变化比例', index=False)
