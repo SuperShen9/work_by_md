@@ -15,6 +15,26 @@ def run3():
     df = du_excel('金币分类')
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 
+    # 修改不规则的列
+    for x in range(df.shape[0]):
+        if '鱼雷' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换鱼雷'
+
+        elif '红宝石' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换红宝石'
+
+
+    def change_col(x):
+        if '鱼雷' in x:
+            return int(x.split('(')[0])
+        elif '红宝石' in x:
+            return int(x.split('(')[0])
+        else:
+            return int(x)
+
+    df['数值'] = df['数值'].apply(lambda x: change_col(str(x)))
+
+    '-----------------系统赠送金币分类-----------------'
 
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)

@@ -18,6 +18,32 @@ def run4():
     df = du_excel('红宝石')
     df2 = du_excel('红宝石明细')
 
+
+
+    # 修改不规则的列
+    for x in range(df.shape[0]):
+        if '红包' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换红包'
+
+        elif '话费' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换话费'
+
+        elif '金币' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换金币'
+
+    def change_col(x):
+        if '红包' in x:
+            return int(x.split('(')[0])
+        elif '话费' in x:
+            return int(x.split('(')[0])
+        elif '金币' in x:
+            return int(x.split('(')[0])
+        else:
+            return int(x)
+
+    df['数值'] = df['数值'].apply(lambda x: change_col(str(x)))
+
+
     '----------------------计算第一个表----------------------------------------------------------'
 
     df = pd.pivot_table(df, values='数值', index='时间', columns='原因')
