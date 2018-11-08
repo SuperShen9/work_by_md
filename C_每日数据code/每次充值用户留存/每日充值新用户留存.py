@@ -2,7 +2,6 @@
 # author：Super.Shen
 
 import pandas as pd
-import numpy as np
 from Func import day
 import warnings
 
@@ -24,6 +23,12 @@ df_cz = df_cz.drop_duplicates(subset=['on'], keep='first')
 
 # 【注册表】生成：去重列
 df_zc['time'] = df_zc['注册时间'].apply(lambda x: str(x)[:10])
+
+# 另外计算注册人数
+s1 = pd.DataFrame(df_zc.groupby('time').size())
+s1.reset_index(inplace=True)
+s1.columns = ['登入时间', '注册人数']
+
 df_zc['on'] = df_zc['time'] + '|' + df_zc['用户ID'].apply(lambda x: str(x))
 df_zc['flag'] = 'new'
 df_zc = df_zc[['on', 'flag']]
@@ -48,6 +53,7 @@ df.reset_index(inplace=True)
 
 # 做透视
 df = pd.pivot_table(df, values=0, index='time', columns='flag')
+
 df.reset_index(inplace=True)
 
 list1 = []
@@ -57,28 +63,20 @@ for n in range(len(list(df.columns))):
     else:
         list1.append(list(df.columns)[n].strip()[5:] + '用户')
 
-
 df.columns = list1
 
-df.to_excel('C:\\Users\Administrator\Desktop\\text.xlsx', index=False)
 
-print(df)
-exit()
+from C_每日数据code.每次充值用户留存.test import form_out
+form = form_out(df)
+form = pd.merge(left=s1, right=form, on='登入时间', how='left')
+
+form['付费比']=(form['新注册消费用户数']/form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
+
+# print(form)
+# exit()
 
 # 输出数据
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\奇奇乐{}日付费新用户留存统计.xlsx'.format(day))
-df.to_excel(writer, sheet_name='每日更新数据', index=False)
-
-
-
-# # 计算每日变化比例
-# df_a = df[df.columns[1:]].fillna(0)
-# df_b = df[df.columns[1:]].shift(1).fillna(0)
-#
-# df_c = (df_a - df_b) / df_b
-# df_c['登入时间'] = df['登入时间']
-#
-# df_c = df_c[['登入时间'] + list(df_c.columns[:-1])]
-#
-# df_c.replace(np.inf, np.nan, inplace=True)
-# df_c.to_excel(writer, sheet_name='变化比例', index=False)
+form.to_excel(writer, sheet_name='付费用户每日留存', index=False)
+df.to_excel(writer, sheet_name='data', index=False)
+writer.save()

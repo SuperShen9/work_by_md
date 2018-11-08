@@ -10,6 +10,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+
 def run9():
     df = du_excel('渠道')
 
@@ -20,7 +21,7 @@ def run9():
 
     df.reset_index(inplace=True)
 
-    df.loc[0,'兑换总金额']=df.loc[0,'兑换红包金额']+df.loc[0,'兑换话费金额']
+    df.loc[0, '兑换总金额'] = df.loc[0, '兑换红包金额'] + df.loc[0, '兑换话费金额']
     del df['兑换话费金额']
     del df['兑换红包金额']
 
@@ -66,6 +67,7 @@ def run7():
     print('\n第八个表【税收】运行完毕……')
 
     return df.tail(2)
+
 
 if __name__ == '__main__':
     run9()
