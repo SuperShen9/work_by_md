@@ -52,6 +52,8 @@ def form_out(df):
     more('次日留存')
     more('3日留存')
     more('7日留存')
+    # more('14日留存')
+    # more('30日留存')
 
     form.replace('nan%', np.NAN, inplace=True)
     form.fillna(method='ffill', inplace=True)

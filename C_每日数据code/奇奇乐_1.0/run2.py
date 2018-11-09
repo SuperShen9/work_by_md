@@ -54,7 +54,7 @@ def run2():
     df_form = pd.DataFrame()
 
     def df_f(df):
-        # df_form.loc[i, '平台'] = '奇奇乐'
+
         df_form.loc[i, '日期'] = '{}'.format(bef_yesterday)
 
         # 人数计算

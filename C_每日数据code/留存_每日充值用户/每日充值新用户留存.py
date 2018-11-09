@@ -66,13 +66,13 @@ for n in range(len(list(df.columns))):
 df.columns = list1
 
 # 导入test中的函数
-from C_每日数据code.留存_每次充值用户.test import form_out
+from C_每日数据code.留存_每日充值用户.test import form_out
 
 form = form_out(df)
 # 添加充值人数
 form = pd.merge(left=s1, right=form, on='登入时间', how='left')
 
-form['付费比'] = (form['新注册消费用户数'] / form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
+form['付费率'] = (form['新注册消费用户数'] / form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
 
 # print(form)
 # exit()
