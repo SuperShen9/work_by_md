@@ -66,7 +66,7 @@ for n in range(len(list(df.columns))):
 df.columns = list1
 
 
-from C_每日数据code.每次充值用户留存.test import form_out
+from C_每日数据code.留存_每次充值用户.test import form_out
 form = form_out(df)
 form = pd.merge(left=s1, right=form, on='登入时间', how='left')
 

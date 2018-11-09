@@ -9,8 +9,3 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-df = pd.DataFrame([[1, 2], [3, 4]], columns=list('AB'))
-df2 = pd.DataFrame([[1, 2], [7, 8]], columns=list('AB'))
-
-print(df.append(df2))
-

@@ -2,13 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b15ad20-01a9-4201-93b2-e0ce8e44c918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔迎新/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔金币系统/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/Func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/Func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/备用code文件/浪仔_每日指标/run7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run7.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/每日充值新用户留存.py" beforeDir="false" afterPath="$PROJECT_DIR$/注册数.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/Func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run2.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run3.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run4.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run5.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run6.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run7.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/留存_每次充值用户/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/留存_每次充值用户/每日充值新用户留存.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/Func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run2.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run3.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run4.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run5.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run6.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run7.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/0930code/0930.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/0930code/0930.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/0930code/0930_cycle.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/0930code/0930_cycle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/0930code/0930_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/0930code/0930_index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/myself_每日数据情况/Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/myself_每日数据情况/Func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/myself_每日数据情况/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/myself_每日数据情况/双平台对比.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/myself_每日数据情况/双平台对比.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/myself_每日数据情况/奇奇乐每日新用户.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/myself_每日数据情况/奇奇乐每日新用户.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/xianwan_data/Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/xianwan_data/Func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/xianwan_data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/0930code/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/xianwan_data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/xianwan_data/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/xianwan_data/data_合并.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/xianwan_data/data_合并.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/xianwan_data/闲玩多日充值区间.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/xianwan_data/闲玩多日充值区间.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/Func.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/Func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run2.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run3.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run4.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run5.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run6.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/于_每日数据指标/run7.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/信德1103/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/myself_每日数据情况/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/信德1103/多excel读取多个sheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/信德1103/多excel读取多个sheet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/多excel读取多个sheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/多excel读取多个sheet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/大户充值.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/大户充值.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/奖品发放汇总.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/奖品发放汇总.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/宝石.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/宝石.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/推广用户/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/xianwan_data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/推广用户/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/推广用户/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/推广用户/充值再合并.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/推广用户/充值再合并.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/推广用户/备用.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/推广用户/备用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/每小时充值统计.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/每小时充值统计.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/Z1全部充值_大户.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/Z1全部充值_大户.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/Z2充值大户_充值曲线.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/Z2充值大户_充值曲线.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/Z3区间序列转换.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/Z3区间序列转换.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/Z4区间加留存率.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/Z4区间加留存率.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/信德1103/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔充值/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔充值/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔迎新/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/推广用户/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔迎新/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔迎新/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔金币系统/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/浪仔数据分析/浪仔金币系统/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/备用plus/浪仔数据分析/浪仔金币系统/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/读取多个sheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/读取多个sheet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/读取多个sheet_0930.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/读取多个sheet_0930.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/备用code文件/金额_转置.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/Other/金额_转置.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +107,8 @@
     <session id="2137481134">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="3" />
@@ -39,19 +126,19 @@
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="6" />
-          <entry key="py" value="675" />
+          <entry key="py" value="694" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="675" />
+          <entry key="Python" value="694" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -59,13 +146,13 @@
           <entry key="Python Console" value="13" />
           <entry key="dummy" value="204" />
           <entry key="gitignore" value="33" />
-          <entry key="py" value="35239" />
+          <entry key="py" value="35382" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="237" />
-          <entry key="Python" value="35252" />
+          <entry key="Python" value="35395" />
         </counts>
       </usages-collector>
     </session>
@@ -73,27 +160,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py">
+        <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+            <state relative-caret-position="276">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="48" column="93" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="93" />
-              <folding>
-                <element signature="e#45#64#0" expanded="true" />
-                <marker date="1541674412797" expanded="true" signature="283:284" ph="..." />
-                <marker date="1541674412797" expanded="true" signature="407:1648" ph="..." />
-                <marker date="1541674412797" expanded="true" signature="1152:1593" ph="..." />
               </folding>
             </state>
           </provider>
@@ -146,10 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build/备用/钉钉_红包.py" />
-        <option value="$PROJECT_DIR$/build/测试新格式/钉钉_红包.py" />
-        <option value="$PROJECT_DIR$/build/所有功能_test.py" />
-        <option value="$PROJECT_DIR$/新用户留存/Func.py" />
         <option value="$PROJECT_DIR$/新用户留存/data.py" />
         <option value="$PROJECT_DIR$/新用户留存/新用户充值分析.py" />
         <option value="$PROJECT_DIR$/build/功能_1031.py" />
@@ -197,6 +265,10 @@
         <option value="$PROJECT_DIR$/每日充值新用户留存.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/a.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/Func.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run5.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/Func.py" />
       </list>
     </option>
   </component>
@@ -214,7 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,29 +298,36 @@
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="C_每日数据code" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="C_每日数据code" type="462c0819:PsiDirectoryNode" />
+              <item name="浪仔_1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\每次充值用户留存" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\周月报告" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件\信德1103" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\额外功能" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\build" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\新用户留存" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\build\测试新格式" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件\Other" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件\备用plus" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用code文件" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\每次充值用户留存" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\周月报告" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,8 +342,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.每日充值新用户留存 (1)">
-    <configuration name="每日充值新用户留存 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="红宝石" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,11 +351,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\于_每日数据指标\4，红宝石.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,7 +364,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="每日充值新用户留存" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="月报" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,7 +376,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\每次充值用户留存\每日充值新用户留存.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/月报.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="我要赚钱" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\于_每日数据指标\6，我要赚钱.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="双平台对比" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/每日数据情况" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/每日数据情况/双平台对比.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -475,7 +595,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="红宝石" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,11 +603,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\于_每日数据指标\4，红宝石.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/a.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -496,7 +616,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="月报" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="b" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -508,7 +628,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/月报.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/b.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -517,7 +637,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="我要赚钱" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -525,11 +645,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/于_每日数据指标" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/浪仔_1.0" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\于_每日数据指标\6，我要赚钱.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -538,7 +658,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="双平台对比" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -546,11 +666,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/每日数据情况" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/每日数据情况/双平台对比.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -559,7 +679,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -567,32 +687,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled\C_每日数据code\每次充值用户留存\test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -602,19 +701,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.每日充值新用户留存" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.注册数" />
-      <item itemvalue="Python.每日充值新用户留存 (1)" />
-      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.a" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.run5" />
+      <item itemvalue="Python.b" />
+      <item itemvalue="Python.main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.每日充值新用户留存 (1)" />
-        <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.每日充值新用户留存" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.注册数" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.b" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.run5" />
+        <item itemvalue="Python.a" />
       </list>
     </recent_temporary>
   </component>
@@ -641,7 +740,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15327695" />
@@ -649,7 +748,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39933258" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32925472" />
@@ -686,75 +785,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/备用code文件/宝石.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/每小时充值统计.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/金额_转置.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/新用户留存/新用户充值分析.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/推广用户/充值再合并.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/xianwan_data/Func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/xianwan_data/闲玩多日充值区间.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/xianwan_data/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/xianwan_data/data_合并.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/dingding01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="275" column="44" lean-forward="true" selection-start-line="272" selection-start-column="1" selection-end-line="275" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/0930code/0930_cycle.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/读取多个sheet_0930.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/Other/读取多个sheet_0930.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/读取多个sheet.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/Other/读取多个sheet.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/core/indexes/base.py">
@@ -764,14 +802,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/多excel读取多个sheet.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/Other/多excel读取多个sheet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/信德1103/多excel读取多个sheet.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/信德1103/多excel读取多个sheet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
@@ -779,56 +817,56 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/grid.py" />
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run4.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run5.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run6.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run6.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run7.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run7.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run3.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run2.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/run1.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/run1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-186">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/Func.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/Func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
@@ -842,14 +880,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/备用code文件/于_每日数据指标/main.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/备用plus/于_每日数据指标/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="55" column="58" lean-forward="true" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run7.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run7.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
@@ -863,56 +901,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run6.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run6.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/Func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run1.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run2.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1308">
           <caret line="85" column="12" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/Func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run6.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run6.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run2.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-544">
           <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run5.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
@@ -929,68 +953,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run5.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run3.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run3.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run4.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="43" column="59" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="43" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/run4.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run7.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run7.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/main.py">
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_每日指标/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,37 +1009,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/b.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/留存_每次充值用户/每日充值新用户留存.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_每日指标/run1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="47" lean-forward="true" selection-start-line="45" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/每次充值用户留存/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="48" column="93" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="93" />
+        <state relative-caret-position="185">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
-            <marker date="1541674412797" expanded="true" signature="283:284" ph="..." />
-            <marker date="1541674412797" expanded="true" signature="407:1648" ph="..." />
-            <marker date="1541674412797" expanded="true" signature="1152:1593" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/每次充值用户留存/每日充值新用户留存.py">
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/留存_每次充值用户/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        <state relative-caret-position="304">
+          <caret line="48" column="93" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/Func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/奇奇乐_每日指标/run1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="87" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/奇奇乐玩法计算/方案优化_红宝石.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/奇奇乐玩法计算/税差计算.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/Func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="18" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/Func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用code文件/浪仔_每日指标/Func.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/浪仔_1.0/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
             <element signature="e#45#64#0" expanded="true" />
           </folding>
