@@ -53,9 +53,9 @@ df.reset_index(inplace=True)
 
 # 做透视
 df = pd.pivot_table(df, values=0, index='time', columns='flag')
-
 df.reset_index(inplace=True)
 
+# 重命名列名
 list1 = []
 for n in range(len(list(df.columns))):
     if n == 0:
@@ -65,18 +65,20 @@ for n in range(len(list(df.columns))):
 
 df.columns = list1
 
-
+# 导入test中的函数
 from C_每日数据code.留存_每次充值用户.test import form_out
+
 form = form_out(df)
+# 添加充值人数
 form = pd.merge(left=s1, right=form, on='登入时间', how='left')
 
-form['付费比']=(form['新注册消费用户数']/form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
+form['付费比'] = (form['新注册消费用户数'] / form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
 
 # print(form)
 # exit()
 
 # 输出数据
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\奇奇乐{}日付费新用户留存统计.xlsx'.format(day))
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\奇奇乐截止{}日付费新用户留存统计.xlsx'.format(int(day)-1))
 form.to_excel(writer, sheet_name='付费用户每日留存', index=False)
 df.to_excel(writer, sheet_name='data', index=False)
 writer.save()
