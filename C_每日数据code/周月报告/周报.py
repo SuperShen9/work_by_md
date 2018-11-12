@@ -121,6 +121,26 @@ def run3():
         print('\n缺少运行数据，请先下载……')
         exit()
 
+    # 修改不规则的列====================================
+    for x in range(df.shape[0]):
+        if '鱼雷' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换鱼雷'
+
+        elif '红宝石' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换红宝石'
+
+    def change_col(x):
+        if '鱼雷' in x:
+            return int(x.split('(')[0])
+        elif '红宝石' in x:
+            return int(x.split('(')[0])
+        else:
+            return int(x)
+
+    df['数值'] = df['数值'].apply(lambda x: change_col(str(x)))
+
+    # ====================================================
+
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)
     df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
@@ -175,6 +195,31 @@ def run4():
     df = du_excel('红宝石')
     df2 = du_excel('红宝石明细')
 
+    # 修改不规则的列=====================================
+    for x in range(df.shape[0]):
+        if '红包' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换红包'
+
+        elif '话费' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换话费'
+
+        elif '金币' in str(df.loc[x, '数值']):
+            df.loc[x, '原因'] = '玩家兑换金币'
+
+    def change_col(x):
+        if '红包' in x:
+            return int(x.split('(')[0])
+        elif '话费' in x:
+            return int(x.split('(')[0])
+        elif '金币' in x:
+            return int(x.split('(')[0])
+        else:
+            return int(x)
+
+    df['数值'] = df['数值'].apply(lambda x: change_col(str(x)))
+
+    # ==========================================================
+
     '----------------------计算第一个表----------------------------------------------------------'
 
     df = pd.pivot_table(df, values='数值', index='时间', columns='原因')
@@ -228,12 +273,17 @@ def run5():
     df = pd.DataFrame(df.groupby(['奖励']).size()).T
     df.reset_index(inplace=True)
 
-    try:
-        df = df[['2元红包', '5元红包', '8元红包', '10元红包', '10元话费', '100元话费']]
+    list1 = ['2元红包', '5元红包', '8元红包', '10元红包', '20元红包', '50元红包', '10元话费', '20元话费', '50元话费', '100元话费']
 
+    try:
+        df = df[list1]
     except KeyError:
-        df = df[['2元红包', '5元红包', '8元红包', '10元红包', '10元话费']]
-        df['100元话费'] = 0
+        # 判定红包类型是否存在于list1
+        error = [l for l in list1 if l not in list(df.columns)]
+        # 把不存在的部分保存进df
+        for x in error:
+            df[x] = 0
+        df = df[list1]
 
     df.fillna(0, inplace=True)
 
@@ -311,14 +361,16 @@ df3.to_excel(writer, sheet_name='金币产出', index=False)
 df_3.to_excel(writer, sheet_name='金币消耗', index=False)
 df_3_3.to_excel(writer, sheet_name='金币系统赠送', index=False)
 
+df6.to_excel(writer, sheet_name='我要赚钱', index=False)
+
+df7.to_excel(writer, sheet_name='税收', index=False)
+
 df4.to_excel(writer, sheet_name='宝石分类', index=False)
 df_4.to_excel(writer, sheet_name='宝石明细', index=False)
 
 df5.to_excel(writer, sheet_name='奖品发放', index=False)
 
-df6.to_excel(writer, sheet_name='我要赚钱', index=False)
 
-df7.to_excel(writer, sheet_name='税收', index=False)
 
 
 writer.save()
