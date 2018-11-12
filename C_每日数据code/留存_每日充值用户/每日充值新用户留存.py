@@ -28,6 +28,8 @@ df_zc['time'] = df_zc['注册时间'].apply(lambda x: str(x)[:10])
 s1 = pd.DataFrame(df_zc.groupby('time').size())
 s1.reset_index(inplace=True)
 s1.columns = ['登入时间', '注册人数']
+s1['登入时间']=s1['登入时间'].apply(lambda x:pd.to_datetime(x))
+s1.sort_values('登入时间',inplace=True)
 
 df_zc['on'] = df_zc['time'] + '|' + df_zc['用户ID'].apply(lambda x: str(x))
 df_zc['flag'] = 'new'
@@ -44,12 +46,18 @@ df_cz['flag'] = df_cz['on'].apply(lambda x: x.split('|')[0])
 # 【登入表】计算
 df['time'] = df['login_time'].apply(lambda x: str(x)[:10])
 
+
+
 # 合并【登入表】和【充值用户】
 df = pd.merge(left=df, right=df_cz, on='player_id', how='left')
 
 # gb数据用于透视
 df = pd.DataFrame(df.groupby(['time', 'flag']).size())
 df.reset_index(inplace=True)
+
+df['time']=df['time'].apply(lambda x:pd.to_datetime(x))
+df['flag']=df['flag'].apply(lambda x:pd.to_datetime(x))
+
 
 # 做透视
 df = pd.pivot_table(df, values=0, index='time', columns='flag')
@@ -61,9 +69,10 @@ for n in range(len(list(df.columns))):
     if n == 0:
         list1.append('登入时间')
     else:
-        list1.append(list(df.columns)[n].strip()[5:] + '用户')
+        list1.append(str(list(df.columns)[n])[6:10] + '用户')
 
 df.columns = list1
+
 
 # 导入test中的函数
 from C_每日数据code.留存_每日充值用户.test import form_out
