@@ -2,25 +2,29 @@
 # author：Super.Shen
 
 import pandas as pd
+import numpy as np
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import datetime
 import time
 
-# ----------------实时监测代码--------------------
+f1 = pd.read_excel('C:\\Users\Administrator\Desktop\\用户行为.xlsx')
 
-while True:
-    while True:
+# print(f1['金币赢取'])
+# print(f1['金币赢取'].apply(lambda x: -x))
+# exit()
 
-        min = datetime.datetime.now().strftime('%M')
-        sec = datetime.datetime.now().strftime('%S')
-        if int(sec) % 10 <= 3:
-            time.sleep(1)
-            print('数据已发送，读取数据为{}分{}秒.'.format(min, sec))
-            break
-        else:
-            time.sleep(1)
-            break
+f1['盈亏回收比'] = (f1['宝石赚取'] / (f1['金币赢取'].apply(lambda x: -x)))
 
-    time.sleep(10-1)
+f1.sort_values('盈亏回收比', ascending=0, inplace=True)
+
+f1.replace(-np.inf, np.NAN, inplace=True)
+
+# f1.to_excel('C:\\Users\Administrator\Desktop\\XXXX.xlsx')
+# exit()
+
+y = pd.DataFrame(pd.cut(f1['盈亏回收比'], 100))
+print(y.groupby('盈亏回收比').size())
+
+
