@@ -9,7 +9,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-from Func import du_old_excel, du_excel
+from Func import du_old_excel, du_excel, y7
 import datetime
 
 print('\n########请注意Func中的读取修改！###########\n')
@@ -25,13 +25,8 @@ def fx(x):
 
 # 充值支付类型周对比
 def run1():
-    try:
-        # 读取数据
-        df = du_old_excel('充值')
-        df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+    df = du_old_excel('充值')
+    df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 
     df_map = df_map[['product_id', 'Flag']]
 
@@ -61,13 +56,8 @@ def run1():
 
 # 新注册用户当日消费情况
 def run2():
-    try:
-        # 读取数据
-        df = du_old_excel('充值')
-        df3 = du_old_excel('注册')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+    df = du_old_excel('充值')
+    df3 = du_old_excel('注册')
 
     # 提取充值数据的日期
     df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
@@ -87,7 +77,6 @@ def run2():
     df_form = pd.DataFrame()
 
     def df_f(df):
-
         # 人数计算
         df_form.loc[i, '新用户量'] = len(df[df['Flag'] == 'new']['player_id'].unique())
         df_form.loc[i, '总用户量'] = len(df['player_id'].unique())
@@ -113,13 +102,8 @@ def run2():
 
 # 周度金币产生消耗占比
 def run3():
-    try:
-        # 读取数据
-        df = du_excel('金币分类')
-        df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+    df = du_excel('金币分类')
+    df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
 
     # 修改不规则的列====================================
     for x in range(df.shape[0]):
@@ -143,7 +127,13 @@ def run3():
 
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)
+
+    # 选取7天之前的时间
+    df3 = df3[df3['时间'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
+    print('\n如果是月报，需要修改！ func中的y7值改为30\n')
+
     df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
+
     df3 = df3[['每日登录抽奖', 'VIP奖励', '新手礼包', '成就任务', '分享抽奖']]
 
     df3.reset_index(inplace=True)
@@ -155,6 +145,10 @@ def run3():
     # 金币消耗-透视
     df2 = df[df.columns[-3:]]
     df2.dropna(axis=0, how='any', inplace=True)
+
+    # 选取7天之前的时间
+    df2 = df2[df2['时间2'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
+
     df2 = pd.pivot_table(df2, values='数值2', index='时间2', columns='原因2')
     del df2['单局结算']
     df2.reset_index(drop=True, inplace=True)
@@ -164,6 +158,10 @@ def run3():
     '----------------------------金币产出汇总表--------------------------'
     # 金币产出-透视
     df = df[df.columns[:3]]
+
+    # 选取7天之前的时间
+    df = df[df['时间'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
+
     df_map = df_map[['原因', 'jinbi']]
     df_map.dropna(inplace=True)
 
@@ -217,6 +215,10 @@ def run4():
             return int(x)
 
     df['数值'] = df['数值'].apply(lambda x: change_col(str(x)))
+
+    # 选取7天之前的时间
+    df = df[df['时间'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
+    df2 = df2[df2['日期'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
 
     # ==========================================================
 
@@ -321,13 +323,14 @@ def run6():
 def run7():
     df = du_excel('税收')
 
+    # 选取7天之前的时间
+    df = df[df['日期'].apply(lambda x: pd.to_datetime(x)) >= pd.to_datetime(y7)]
+
     df['差值'] = df['税收'] - df['税收'].shift(30)
 
-    df=df.tail(5)
+    df = df.tail(5)
 
     df = pd.pivot_table(df, values='差值', index='日期', columns='场')
-
-
 
     df['总和'] = df.apply(lambda x: x.sum(), axis=1)
 
@@ -337,11 +340,7 @@ def run7():
 
     print('第七个表【税收】运行完毕……')
 
-
     return df
-
-# df7 = run7()
-# exit()
 
 
 df1 = run1()
@@ -351,6 +350,7 @@ df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
 df7 = run7()
+exit()
 
 # # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\周报材料.xlsx')
@@ -369,8 +369,5 @@ df4.to_excel(writer, sheet_name='宝石分类', index=False)
 df_4.to_excel(writer, sheet_name='宝石明细', index=False)
 
 df5.to_excel(writer, sheet_name='奖品发放', index=False)
-
-
-
 
 writer.save()
