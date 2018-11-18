@@ -15,6 +15,8 @@ df['变动时间'] = df['变动时间'].apply(lambda x: pd.to_datetime(x))
 
 df.sort_values('变动时间', inplace=True)
 
+print(df)
+
 f1 = pd.DataFrame()
 count = 0
 

@@ -350,7 +350,6 @@ df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
 df7 = run7()
-exit()
 
 # # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\周报材料.xlsx')

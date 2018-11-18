@@ -3,10 +3,26 @@
 
 import pandas as pd
 import warnings
+from Func import gb
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_excel('C:\\Users\Administrator\Desktop\\变动日志.xls')
+# df_c = pd.read_excel('C:\\Users\Administrator\Desktop\行为数据分析\充值15.xls')
+# df_c = gb(df_c, 'player_id', 'amount')
+# df_c.rename(columns={'player_id': '用户ID', 'amount': '充值'}, inplace=True)
+#
+#
+# df = pd.read_excel('C:\\Users\Administrator\Desktop\\用户行为.xlsx')
+#
+# df = pd.merge(left=df, right=df_c, on='用户ID',how='left')
+#
+# df.to_excel('C:\\Users\Administrator\Desktop\\用户行为.xlsx', index=False)
+#
+# # print(df.head())
+#
+# exit()
+
+df = pd.read_excel('C:\\Users\Administrator\Desktop\行为数据分析\变动日志15.xls')
 
 df['变动时间'] = df['变动时间'].apply(lambda x: pd.to_datetime(x))
 
@@ -38,25 +54,14 @@ for x, y in df.groupby('用户ID'):
 
     count += 1
 
-
-
 f1['金币赢取'] = f1['红包场金币变动'] / 20000
 f1['宝石赚取'] = f1['红包场红宝石变动'] / 10
 f1['求和'] = f1['金币赢取'] + f1['宝石赚取']
 
-f1['盈亏回收比']=(f1['宝石赚取']/(f1['金币赢取'].apply(lambda x:-1))).apply(lambda x:'%.0f%%'%x)
+f1['盈亏回收比'] = (f1['宝石赚取'] / (f1['金币赢取'].apply(lambda x: -x)) * 100)
+
+f1 = f1[f1['用户ID'] != '100149']
+
+# f1['盈亏回收比'] = (f1['宝石赚取'] / (f1['金币赢取'].apply(lambda x:-x))*100).apply(lambda x: '%.0f%%' % x)
 
 f1.to_excel('C:\\Users\Administrator\Desktop\\用户行为.xlsx', index=False)
-
-# =================备用===============
-# 兑换红宝石
-# print(y[(y['变动属性'] == '红宝石') & (y['游戏种类'] == '大厅')][' 差值（结束值-初始值）'].sum())
-
-# 红包场红宝石变动
-# print(y[(y['变动属性'] == '红宝石') & (y['游戏种类'] == '红包场')][' 差值（结束值-初始值）'].sum())
-
-# 红包场金币变动
-# print(y[(y['变动属性'] == '金币') & (y['游戏种类'] == '红包场')][' 差值（结束值-初始值）'].sum())
-
-# 金币初始值，金币结束值
-# print(y.loc[0, '初始值'], y.loc[y.shape[0] - 1, '结束值'])
