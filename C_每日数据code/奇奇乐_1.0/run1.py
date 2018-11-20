@@ -2,7 +2,8 @@
 # author：Super.Shen
 
 import pandas as pd
-from Func import du_old_excel
+from Func import or_path
+from build.database import qi_pay_data
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -12,10 +13,10 @@ warnings.filterwarnings('ignore')
 
 def run1():
 
-    df = du_old_excel('充值2天')
+    df = qi_pay_data()
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
     df_map = df_map[['product_id', 'Flag']]
-    df['time'] = df['pay_time'].apply(lambda x: x.split(' ')[0])
+    df['time'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0])
 
     # 合并匹配表
     df = pd.merge(left=df, right=df_map, on='product_id', how='left')
@@ -29,16 +30,12 @@ def run1():
     df_out.fillna(0, inplace=True)
     df_out.sort_values(by=df_out.columns[-1], ascending=0, inplace=True)
 
-
-    # df_out[df_out.columns[0][-2:] + '号比例'] = df_out[df_out.columns[0]].apply(
-    #     lambda x: '%.2f%%' % (x / df_out[df_out.columns[0]].sum() * 100))
-    # df_out[df_out.columns[1][-2:] + '号比例'] = df_out[df_out.columns[1]].apply(
-    #     lambda x: '%.2f%%' % (x / df_out[df_out.columns[1]].sum() * 100))
-
     df_out.reset_index(inplace=True)
     df_out.rename(columns={'index': '类型', 'Flag': '类型'}, inplace=True)
 
     print('\n第一个表运行完毕……')
+
+    df_out.to_excel(or_path+'t1213.xlsx')
 
     return df_out
 

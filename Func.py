@@ -14,13 +14,15 @@ warnings.filterwarnings('ignore')
 # 格式是时间戳
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
-day= datetime.datetime.now().strftime('%d')
+day = datetime.datetime.now().strftime('%d')
 hour = datetime.datetime.now().strftime('%H')
 min = datetime.datetime.now().strftime('%M')
 
-
+or_path = 'C:\\Users\Administrator\Desktop\\'
 
 T_line = 35
+
+
 def append_excel(file_path):
     df_all = pd.DataFrame()
     count = 0

@@ -15,7 +15,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-
+or_path = 'C:\\Users\Administrator\Desktop\\'
 # 读取xlsx文件的时候用sheet写入
 def du_excel(sheet_name):
     try:
