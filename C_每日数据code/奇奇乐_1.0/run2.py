@@ -6,7 +6,7 @@ from Func import du_old_excel
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
+from build.database import date,url2
 warnings.filterwarnings('ignore')
 
 from Func import yesterday, bef_yesterday
@@ -14,13 +14,14 @@ from Func import yesterday, bef_yesterday
 
 def run2():
 
-    df = du_old_excel('充值2天')
+    df = date(url2)
     df3 = du_old_excel('注册')
 
-    # 提取充值数据的日期
-    df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
 
-    # #监测第一步
+    # 提取充值数据的日期
+    df['day'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0].split('-')[-1])
+
+    #监测第一步
     # df.to_excel('C:\\Users\Administrator\Desktop\\数据监测—step1.xlsx', index=False)
     # print(df.head())
     # exit()
@@ -83,10 +84,12 @@ def run2():
     del df_form['总用户量']
     del df_form['总消费']
 
+    print(df_form)
+
     print('\n第二个表运行完毕……')
     return df_form
 
 
 if __name__ == '__main__':
     df = run2()
-    print(df)
+

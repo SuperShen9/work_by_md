@@ -3,7 +3,7 @@
 
 import pandas as pd
 from Func import or_path
-from build.database import qi_pay_data
+from build.database import date,url2
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 
 def run1():
 
-    df = qi_pay_data()
+    df = date(url2)
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
     df_map = df_map[['product_id', 'Flag']]
     df['time'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0])
@@ -35,7 +35,7 @@ def run1():
 
     print('\n第一个表运行完毕……')
 
-    df_out.to_excel(or_path+'t1213.xlsx')
+    # print(df_out.head())
 
     return df_out
 
