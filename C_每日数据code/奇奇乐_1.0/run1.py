@@ -2,8 +2,8 @@
 # author：Super.Shen
 
 import pandas as pd
-from Func import or_path
-from build.database import date,url2
+from build.database import date, url2
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -12,7 +12,6 @@ warnings.filterwarnings('ignore')
 
 
 def run1():
-
     df = date(url2)
     df_map = pd.read_excel('C:\\Users\Administrator\Desktop\map.xlsx')
     df_map = df_map[['product_id', 'Flag']]

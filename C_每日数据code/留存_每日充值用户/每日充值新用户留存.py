@@ -4,10 +4,13 @@
 import pandas as pd
 from Func import day
 import warnings
+from build.database import date, url4, yesterday
 
 warnings.filterwarnings('ignore')
 
 from Func import append_excel
+
+date(url4).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\充值数据\\{}.xls'.format(yesterday))
 
 # 读取每日登入用户并合并
 df = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\登入数据')
