@@ -34,7 +34,7 @@ df9 = run9()
 # exit()
 
 # 数据导出
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\浪仔run_{}.xlsx'.format(yesterday))
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\run_浪仔_{}.xlsx'.format(yesterday))
 
 df9.to_excel(writer, sheet_name='渠道', index=False)
 
