@@ -26,7 +26,8 @@ df_reg = df_reg[['on', 'flag']]
 
 df_pay = pd.merge(left=df_pay, right=df_reg, on='on', how='left')
 
-df_pay = df_pay[(df_pay['flag'].notnull()) & (df_pay['channel'] == 800106)]
+# df_pay = df_pay[(df_pay['flag'].notnull()) & (df_pay['channel'] == 800106)]
+df_pay = df_pay[(df_pay['flag'].notnull()) & (df_pay['channel'] == 800113)]
 
 df_out = gb(df_pay, 'time', 'amount').set_index('time')
 

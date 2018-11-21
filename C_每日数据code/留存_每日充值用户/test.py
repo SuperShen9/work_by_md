@@ -18,6 +18,8 @@ def form_out(df):
 
     print('\ndf累加天数：{}天\n'.format(df.shape[0]))
 
+
+
     # 定义留存函数
     def liucun(df, day):
         i = 0
@@ -41,6 +43,7 @@ def form_out(df):
     form.rename(columns={'2日留存': '次日留存'}, inplace=True)
     form.fillna(0, inplace=True)
 
+
     for col in form.columns[2:]:
         form[col + '累计'] = ((form[col].cumsum() / form['新注册消费用户数'].cumsum()) * form[col] / form[col]).apply(
             lambda x: str('%.0f%%' % (x * 100)))
@@ -55,6 +58,8 @@ def form_out(df):
     more('14日留存')
     # more('30日留存')
 
+
+
     form.replace('nan%', np.NAN, inplace=True)
     form.fillna(method='ffill', inplace=True)
     form.replace('0%(0)', np.NAN, inplace=True)
@@ -62,6 +67,6 @@ def form_out(df):
     return form
 
 
-# df = pd.read_excel('C:\\Users\Administrator\Desktop\\text.xlsx')
+# df = pd.read_excel('C:\\Users\Administrator\Desktop\\test.xlsx')
 # if __name__ == '__main__':
 #     print(form_out(df))

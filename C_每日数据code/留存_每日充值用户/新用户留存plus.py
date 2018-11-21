@@ -4,19 +4,23 @@
 import pandas as pd
 from Func import day
 import warnings
-from build.database import date, url4, yesterday
+from build.database import date, url4, yesterday,url5,Register,url6,Login
 
 warnings.filterwarnings('ignore')
 
 from Func import append_excel
 
-date(url4).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\充值数据\\{}.xls'.format(yesterday),index=False)
+Register(date(url5)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\注册数据\\{}.xls'.format(yesterday),index=False)
+
+Login(date(url6)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\登入数据\\{}.xls'.format(yesterday),index=False)
+
+date(url4).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\充值数据\\{}.xls'.format(yesterday),index=False)
+
 
 # 读取每日登入用户并合并
-df = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\登入数据')
-
-df_cz = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\充值数据')
-df_zc = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存统计\注册数据')
+df = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\登入数据')
+df_cz = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\充值数据')
+df_zc = append_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\注册数据')
 
 # 【充值表】生成：去重列
 df_cz['time'] = df_cz['pay_time'].apply(lambda x: pd.to_datetime(str(x).split(' ')[0]))
@@ -78,7 +82,7 @@ df.columns = list1
 
 
 # 导入test中的函数
-from C_每日数据code.留存_每日充值用户.test import form_out
+from test import form_out
 
 form = form_out(df)
 # 添加充值人数
