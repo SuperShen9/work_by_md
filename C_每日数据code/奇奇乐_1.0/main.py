@@ -17,7 +17,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from run1 import run1
-from C_每日数据code.浪仔CPA import run2
+from run2 import run2
 from run3 import run3
 from run4 import run4
 from run5 import run5

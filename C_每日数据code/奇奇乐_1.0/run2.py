@@ -84,8 +84,6 @@ def run2():
     del df_form['总用户量']
     del df_form['总消费']
 
-    print(df_form)
-
     print('\n第二个表运行完毕……')
     return df_form
 

@@ -33,9 +33,6 @@ def run6():
     df.rename(columns={'get_redgem': '获得红宝石', 'recharge': '充值金额', 'redgem': '奖励红宝石', 'gold': '奖励金币', 0: '被推广用户人数'},
               inplace=True)
 
-    print(df)
-
-
     print('\n第六个表运行完毕……')
 
     return df
