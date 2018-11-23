@@ -4,6 +4,7 @@
 import pandas as pd
 from Func import du_old_excel
 from build.Func import or_path
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
@@ -22,33 +23,41 @@ def run2():
         print('\n缺少运行数据，请先下载……')
         exit()
 
-    df = df[df['channel'] == 800106]
+    df = df[(df['channel'] == 800106) | (df['channel'] == 800113)]
 
+    # 取str时间函数
     def time_c(df, col, sp=' '):
         df[col] = df[col].apply(lambda x: pd.to_datetime(str(x).split(sp)[0]))
         return df
 
+    # 取出充值时间为昨天的数据
     df = time_c(df, 'pay_time')
     df = df[df['pay_time'] == pd.to_datetime(yesterday)]
 
-
+    # 注册数据清洗用于匹配
     df3 = time_c(df3, '注册时间')
-    df3['flag']='new'
-    df3.rename(columns={'用户ID':'player_id'},inplace=True)
-    df3=df3[['player_id','flag']]
+    df3['flag'] = 'new'
+    df3.rename(columns={'用户ID': 'player_id'}, inplace=True)
+    df3 = df3[['player_id', 'flag']]
 
-    df=pd.merge(left=df,right=df3,on='player_id',how='left')
-    df=df[df['flag'].notnull()]
+    # 匹配到充值数据
+    df = pd.merge(left=df, right=df3, on='player_id', how='left')
+    df = df[df['flag'].notnull()]
 
+    df = pd.DataFrame([df.groupby('channel')['amount'].sum(), df.groupby('channel')['player_id'].unique()]).T
 
-    print(len(df['player_id'].unique()))
-    print(df['amount'].sum())
+    df['新用户付费人数'] = df['player_id'].apply(lambda x: len(x))
 
-    df.to_excel(or_path+'saddf.xlsx')
+    df['(付费率)'] = ''
+
+    df = df[['新用户付费人数', '(付费率)', 'amount']]
+
+    df.to_excel(or_path + 'CPA注册新用户付费率.xlsx')
 
     exit()
 
     return df
+
 
 if __name__ == '__main__':
     df = run2()

@@ -15,6 +15,8 @@ warnings.filterwarnings('ignore')
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
 day = datetime.datetime.now().strftime('%d')
+bef_yesterday = today - datetime.timedelta(days=2)
+hour = datetime.datetime.now().strftime('%H')
 hour = datetime.datetime.now().strftime('%H')
 min = datetime.datetime.now().strftime('%M')
 

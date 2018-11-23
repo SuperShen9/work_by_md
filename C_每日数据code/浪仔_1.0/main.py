@@ -10,7 +10,7 @@ yesterday = today - datetime.timedelta(days=1)
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
+from build.database import url33, date, huishou
 warnings.filterwarnings('ignore')
 
 from run1 import run1
@@ -30,8 +30,10 @@ df6 = run6()
 df7 = run7()
 df9 = run9()
 
-# print(df8)
-# exit()
+df_hb = huishou(date(url33), 1)
+df_yl = huishou(date(url33), 2)
+df_cc = huishou(date(url33), 3)
+df_sg = huishou(date(url33), 4)
 
 # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\run_浪仔_{}.xlsx'.format(yesterday))
@@ -53,6 +55,11 @@ df5.to_excel(writer, sheet_name='奖品发放')
 df7.tail(2).to_excel(writer, sheet_name='税收', index=False)
 
 df6.to_excel(writer, sheet_name='我要赚钱', index=False)
+
+df_hb.to_excel(writer, sheet_name='红包场', index=False)
+df_yl.to_excel(writer, sheet_name='鱼雷场', index=False)
+df_cc.to_excel(writer, sheet_name='猜猜乐', index=False)
+df_sg.to_excel(writer, sheet_name='水果场', index=False)
 
 writer.save()
 
