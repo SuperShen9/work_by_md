@@ -20,7 +20,7 @@ min = datetime.datetime.now().strftime('%M')
 
 
 # 月报修改之处一 [月报的税收有问题，需要修改。]
-y7=today - datetime.timedelta(days=7)
+y7=today - datetime.timedelta(days=14)
 # y7=today - datetime.timedelta(days=30)
 
 
@@ -58,7 +58,8 @@ def append_excel(file_path):
 def du_excel(sheet_name):
     try:
         # 读取数据
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\\周报数据\\周报.xlsx', sheet_name=sheet_name)
+        # df = pd.read_excel('C:\\Users\Administrator\Desktop\\周报数据\\周报.xlsx', sheet_name=sheet_name)
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\\浪仔周报\\浪仔.xlsx', sheet_name=sheet_name)
         return df
     except FileNotFoundError:
         print('\n缺少运行数据，请先下载……')
@@ -66,10 +67,12 @@ def du_excel(sheet_name):
 
 
 
+
 def du_old_excel(excel_name):
     try:
         # 读取数据  ==========月报修改之处2===============
-        df = pd.read_excel('C:\\Users\Administrator\Desktop\周报数据\\{}.xls'.format(excel_name))
+        # df = pd.read_excel('C:\\Users\Administrator\Desktop\周报数据\\{}.xls'.format(excel_name))
+        df = pd.read_excel('C:\\Users\Administrator\Desktop\浪仔周报\{}.xls'.format(excel_name))
         # df = pd.read_excel('C:\\Users\Administrator\Desktop\月报数据\\{}.xls'.format(excel_name))
         return df
     except FileNotFoundError:
