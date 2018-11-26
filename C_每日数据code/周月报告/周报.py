@@ -228,7 +228,7 @@ def run4():
     df.reset_index(inplace=True)
 
     df = df[
-        ['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '分享抽奖', '玩家兑换红包', '玩家兑换话费', '玩家兑换金币', '幸运抽奖', '购买物品', '欢乐夺宝']]
+        ['时间', '游戏产出', '新手礼包', '充值礼包', '成就任务', '玩家兑换红包', '玩家兑换话费', '玩家兑换金币', '幸运抽奖', '购买物品', '欢乐夺宝']]
 
     df = pd.DataFrame(df.sum()).T
 
@@ -260,6 +260,10 @@ def run4():
         return df2
 
     df2 = hongbaoshi_minxi(df2)
+
+    del df2['一档比']
+    del df2['二档比']
+    del df2['三档比']
 
     print('第四个表运行完毕.')
 
@@ -299,25 +303,26 @@ def run5():
 def run6():
     df = du_old_excel('我要赚钱')
 
-    df['奖励一状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
-    df['奖励二状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
-    df['奖励三状态'].replace({'已完成': 1, '未完成': 0}, inplace=True)
-    or_num = df.shape[0]
-    df = pd.DataFrame(df.sum()).T
+    df['gen_time'] = df['gen_time'].apply(lambda x: x.split(' ')[0])
 
-    df = df[['奖励一状态', '奖励二状态', '奖励三状态']]
+    del df['invite_id']
+    del df['player_id']
+    df.set_index('gen_time', inplace=True)
 
-    df['总和'] = or_num
+    df6 = pd.DataFrame(df.sum()).T
 
-    df['一档完成率'] = (df['奖励一状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
-    df['二档完成率'] = (df['奖励二状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
-    df['三档完成率'] = (df['奖励三状态'] / df['总和']).apply(lambda x: '%.2f%%' % (x * 100))
+    df6['被推广用户人数'] = df.shape[0]
 
-    df = df[['奖励一状态', '奖励二状态', '奖励三状态', '一档完成率', '二档完成率', '三档完成率', '总和']]
+    df6['盈亏'] = df6['recharge'] - df6['get_redgem'] / 10 - df6['redgem'] / 10 - df6['gold'] / 20000
+
+    df6.rename(columns={'get_redgem': '获得红宝石', 'recharge': '充值金额', 'redgem': '奖励红宝石', 'gold': '奖励金币', 0: '被推广用户人数'},
+               inplace=True)
+
+    df6 = df6[['被推广用户人数', '获得红宝石', '充值金额', '奖励红宝石', '奖励金币', '盈亏']]
 
     print('第六个表运行完毕.')
 
-    return df
+    return df6
 
 
 def run7():
@@ -353,8 +358,10 @@ df7 = run7()
 
 # # 数据导出
 writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\周报材料.xlsx')
-df1.to_excel(writer, sheet_name='充值支付类型', index=False)
+
 df2.to_excel(writer, sheet_name='新用户消费占比', index=False)
+df1.to_excel(writer, sheet_name='充值支付类型', index=False)
+
 
 df3.to_excel(writer, sheet_name='金币产出', index=False)
 df_3.to_excel(writer, sheet_name='金币消耗', index=False)

@@ -39,7 +39,7 @@ def run3():
     df3 = df[df.columns[:3]]
     df3.dropna(axis=0, how='any', inplace=True)
     df3 = pd.pivot_table(df3, values='数值', index='时间', columns='原因')
-    df3 = df3[['每日登录抽奖', 'VIP奖励', '新手礼包', '成就任务', '分享抽奖']]
+    df3 = df3[['每日登录抽奖', 'VIP奖励', '新手礼包', '成就任务']]
     df3.reset_index(inplace=True)
     df3 = df3[df3['时间'] >= pd.to_datetime('{}'.format(bef_yesterday))]
 
