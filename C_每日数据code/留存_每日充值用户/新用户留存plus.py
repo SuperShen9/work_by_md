@@ -10,11 +10,11 @@ warnings.filterwarnings('ignore')
 
 from Func import append_excel
 
-Register(date(url5)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\注册数据\\{}.xls'.format(yesterday),index=False)
+Register(date(url5)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\注册数据\\{}.xlsx'.format(yesterday),index=False)
 
-Login(date(url6)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\登入数据\\{}.xls'.format(yesterday),index=False)
+Login(date(url6)).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\登入数据\\{}.xlsx'.format(yesterday),index=False)
 
-date(url4).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\充值数据\\{}.xls'.format(yesterday),index=False)
+date(url4).to_excel('C:\\Users\Administrator\Desktop\奇奇乐付费新用户留存1\充值数据\\{}.xlsx'.format(yesterday),index=False)
 
 
 # 读取每日登入用户并合并
