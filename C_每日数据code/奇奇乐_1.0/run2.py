@@ -3,28 +3,25 @@
 
 import pandas as pd
 from Func import du_old_excel
+
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-from build.database import date,url2
+from build.database import date, url2, url8
+
 warnings.filterwarnings('ignore')
 
 from Func import yesterday, bef_yesterday
 
 
 def run2():
-
     df = date(url2)
-    df3 = du_old_excel('注册')
 
+    # 2018-11-27更新【前天注册新用户】
+    df3 = date(url8)
 
     # 提取充值数据的日期
     df['day'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0].split('-')[-1])
-
-    #监测第一步
-    # df.to_excel('C:\\Users\Administrator\Desktop\\数据监测—step1.xlsx', index=False)
-    # print(df.head())
-    # exit()
 
     # df和df2重新赋值
     df2 = df[df['day'] == str(int(str(yesterday)[-2:]))]
@@ -32,14 +29,11 @@ def run2():
     # 注册人数df
     df = df[df['day'] == str(int(str(bef_yesterday)[-2:]))]
 
-    # 监测第二步
-    # print(str(yesterday)[-2:])
-    # print(df.head())
-    # exit()
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
-    df3.rename(columns={'用户ID': 'player_id'}, inplace=True)
+    df3.rename(columns={'用户id': 'player_id'}, inplace=True)
+
     df3 = df3[['player_id', 'Flag']]
 
     df = pd.merge(left=df, right=df3, on='player_id', how='left')
@@ -48,14 +42,11 @@ def run2():
     df2 = pd.merge(left=df2, right=df3, on='player_id', how='left')
     df2['Flag'].fillna('old', inplace=True)
 
-    # df.to_excel('C:\\Users\Administrator\Desktop\\NEW_T.xlsx', index=False)
-    # exit()
 
     i = 0
     df_form = pd.DataFrame()
 
     def df_f(df):
-
         df_form.loc[i, '日期'] = '{}'.format(bef_yesterday)
 
         # 人数计算
@@ -90,4 +81,3 @@ def run2():
 
 if __name__ == '__main__':
     df = run2()
-

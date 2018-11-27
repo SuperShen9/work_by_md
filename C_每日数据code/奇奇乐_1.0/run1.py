@@ -34,7 +34,6 @@ def run1():
 
     print('\n第一个表运行完毕……')
 
-    # print(df_out.head())
 
     return df_out
 

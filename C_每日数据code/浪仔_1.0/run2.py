@@ -6,23 +6,20 @@ from Func import du_old_excel
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
-
+from build.database import date,url22,url88
 warnings.filterwarnings('ignore')
 
 from Func import yesterday, bef_yesterday
 
 
 def run2():
-    try:
-        # 读取数据
-        df = du_old_excel('充值2天')
-        df3 = du_old_excel('注册')
-    except FileNotFoundError:
-        print('\n缺少运行数据，请先下载……')
-        exit()
+
+    # 读取数据
+    df = date(url22)
+    df3 = date(url88)
 
     # 提取充值数据的日期
-    df['day'] = df['pay_time'].apply(lambda x: x.split(' ')[0].split('/')[2])
+    df['day'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0].split('-')[-1])
 
     # #监测第一步
     # df.to_excel('C:\\Users\Administrator\Desktop\\数据监测—step1.xlsx', index=False)
@@ -42,7 +39,7 @@ def run2():
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
-    df3.rename(columns={'用户ID': 'player_id'}, inplace=True)
+    df3.rename(columns={'用户id': 'player_id'}, inplace=True)
     df3 = df3[['player_id', 'Flag']]
 
     df = pd.merge(left=df, right=df3, on='player_id', how='left')
@@ -86,8 +83,6 @@ def run2():
     # 删除多余2列
     del df_form['总用户量']
     del df_form['总消费']
-
-    # df_form.to_excel('C:\\Users\Administrator\Desktop\TTT.xlsx',index=False)
 
     print('\n第二个表运行完毕……')
     return df_form
