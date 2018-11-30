@@ -20,7 +20,7 @@ def run6():
     del df['player_id']
     df.set_index('gen_time', inplace=True)
 
-    df_s=pd.DataFrame(df.groupby('gen_time').size())
+    df_s = pd.DataFrame(df.groupby('gen_time').size())
 
     df = df.groupby('gen_time').sum()
 
@@ -28,12 +28,10 @@ def run6():
 
     df.reset_index(inplace=True)
 
-    df=pd.merge(left=df_s,right=df,on='gen_time',how='left')
+    df = pd.merge(left=df_s, right=df, on='gen_time', how='left')
 
     df.rename(columns={'get_redgem': '获得红宝石', 'recharge': '充值金额', 'redgem': '奖励红宝石', 'gold': '奖励金币', 0: '被推广用户人数'},
               inplace=True)
-
-
 
     print('\n第六个表运行完毕……')
 

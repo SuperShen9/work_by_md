@@ -13,9 +13,10 @@ warnings.filterwarnings('ignore')
 import datetime
 
 today = datetime.date.today()
+day_cut = int(str(pd.to_datetime(today)-pd.to_datetime('2018/11/14')).split(' ')[0])
 
 df_all = pd.DataFrame()
-for x in range(14, 0, -1):
+for x in range(day_cut, 0, -1):
     day = today - datetime.timedelta(days=x)
     df = date(lc_url(day))
     df['time'] = day
