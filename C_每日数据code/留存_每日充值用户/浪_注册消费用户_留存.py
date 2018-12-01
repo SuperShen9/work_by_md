@@ -118,8 +118,8 @@ def liucun(df, df_cz, df_zc, choose='new'):
 
     form['付费率'] = (form['新注册消费用户数'] / form['注册人数']).apply(lambda x: str('%.2f%%' % (x * 100)))
 
-    form = form[['登入时间', '注册人数', '新注册消费用户数', '付费率', '次日留存', '3日留存', '7日留存', '14日留存',
-                 '次日留存累计', '3日留存累计', '7日留存累计', '14日留存累计']]
+    form = form[['登入时间', '注册人数', '新注册消费用户数', '付费率', '次日留存', '3日留存', '7日留存', '14日留存', '30日留存',
+                 '次日留存累计', '3日留存累计', '7日留存累计', '14日留存累计', '30日留存累计']]
 
     return form, df, file_name
 
@@ -130,7 +130,7 @@ form, df, file_name = liucun(df, df_cz, df_zc, 'new')
 # exit()
 
 # 输出数据
-writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\浪仔截止{}日付费{}用户留存统计.xlsx'.format(int(day) - 1, file_name))
+writer = pd.ExcelWriter('C:\\Users\Administrator\Desktop\\浪仔截止{}日付费{}用户留存统计.xlsx'.format(yesterday, file_name))
 form.to_excel(writer, sheet_name='付费用户每日留存', index=False)
 df.to_excel(writer, sheet_name='data', index=False)
 writer.save()

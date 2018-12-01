@@ -56,7 +56,7 @@ def form_out(df):
     more('3日留存')
     more('7日留存')
     more('14日留存')
-    # more('30日留存')
+    more('30日留存')
 
 
 

@@ -37,11 +37,13 @@ def append_excel(file_path):
     return df_all
 
 # 读取每日登入用户并合并
-df = append_excel('C:\\Users\Administrator\Desktop\登入数据')
+df = append_excel('C:\\Users\Administrator\Desktop\奇10月登入数据')
+
+print('\n当前文件中所有用户数量：{}'.format(df.shape[0]))
 
 from build.Func import or_path
 
-df.to_excel(or_path('TTT'))
+# df.to_excel(or_path('TTT'))
 
 print('\n当前文件中用户唯一数值：{}'.format(df.drop_duplicates('player_id').shape[0]))
 
