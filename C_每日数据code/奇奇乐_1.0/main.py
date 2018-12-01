@@ -65,7 +65,6 @@ df_yl.to_excel(writer, sheet_name='鱼雷场', index=False)
 
 writer.save()
 
-exit()
 
 file1 = 'C:\\Users\Administrator\Desktop\\{}数据'.format(today)
 list1 = [file1, ]
