@@ -45,6 +45,7 @@ def old_app(pingtai='qi'):
                     if pingtai == 'qi':
                         df = df[['时间', '用户充值', '兑换红宝石', '兑换鱼雷', '其他']]
                     else:
+                        print(file)
                         df = df[['时间', '用户充值', '兑换红包券', '兑换鱼雷', '其他']]
 
                 elif name == '宝石分类':
@@ -80,4 +81,4 @@ def old_app(pingtai='qi'):
 
     writer.save()
 
-old_app()
+old_app(2)
