@@ -31,7 +31,7 @@ df4, df_4 = run4()
 df5 = run5()
 df6 = run6()
 df7 = run7()
-df8 = run8()
+# df8 = run8()
 df9 = run9()
 
 df_hb = huishou(date(url3), 1)
@@ -58,12 +58,14 @@ df7.tail(2).to_excel(writer, sheet_name='税收', index=False)
 
 df6.to_excel(writer, sheet_name='我要赚钱', index=False)
 
-df8.to_excel(writer, sheet_name='回收比', index=False)
+# df8.to_excel(writer, sheet_name='回收比', index=False)
 
 df_hb.to_excel(writer, sheet_name='红包场', index=False)
 df_yl.to_excel(writer, sheet_name='鱼雷场', index=False)
 
 writer.save()
+
+exit()
 
 file1 = 'C:\\Users\Administrator\Desktop\\{}数据'.format(today)
 list1 = [file1, ]

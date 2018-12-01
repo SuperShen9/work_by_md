@@ -7,6 +7,7 @@ from Func import du_excel
 pd.set_option('expand_frame_repr', False)
 pd.set_option('display.max_rows', 1000)
 import warnings
+from build.database import earn, qi_url, yesterday, y2, y3
 
 warnings.filterwarnings('ignore')
 
@@ -50,9 +51,15 @@ def run8():
 
 
 def run7():
-    df = du_excel('税收')
+    df2 = earn(qi_url, y3)
+    df1 = earn(qi_url, y2)
+    df = earn(qi_url, yesterday)
 
-    df['日期'] = df['日期'].apply(lambda x: str(x)[:10])
+    df_c = df2.append(df1, ignore_index=True)
+    df = df_c.append(df, ignore_index=True)
+
+    df['税收'] = df['税收'].apply(lambda x: int(x))
+    df['日期'] = df['日期'].apply(lambda x: str(x).split('T')[0])
     df['差值'] = df['税收'] - df['税收'].shift(5)
 
     df = pd.pivot_table(df, values='差值', index='日期', columns='场')
@@ -70,4 +77,4 @@ def run7():
 
 
 if __name__ == '__main__':
-    run9()
+    print(run7())

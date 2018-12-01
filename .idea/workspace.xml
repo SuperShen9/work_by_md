@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b15ad20-01a9-4201-93b2-e0ce8e44c918" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/C_每日数据code/周月报告/合并每日生成文件_于.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPA渠道分析.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/CPA渠道分析.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_每日数据code/周月报告/读取多个sheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/周月报告/合并每日生成文件.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/推广对比.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/推广对比.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/用户行为.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用code文件/用户行为.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,13 +43,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="6" />
-          <entry key="py" value="1180" />
+          <entry key="py" value="1187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="1180" />
+          <entry key="Python" value="1187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -62,13 +57,13 @@
           <entry key="Python Console" value="13" />
           <entry key="dummy" value="349" />
           <entry key="gitignore" value="33" />
-          <entry key="py" value="56003" />
+          <entry key="py" value="56353" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="382" />
-          <entry key="Python" value="56016" />
+          <entry key="Python" value="56366" />
         </counts>
       </usages-collector>
     </session>
@@ -76,14 +71,36 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+                <element signature="e#243#561#0" />
+                <element signature="e#580#936#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+            <state relative-caret-position="238">
+              <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
               <folding>
-                <element signature="e#6168#6183#0" />
-                <marker date="1543656315967" expanded="true" signature="6013:6016" ph="..." />
-                <marker date="1543656315967" expanded="true" signature="6270:6272" ph="..." />
+                <marker date="1543658935436" expanded="true" signature="6102:6105" ph="..." />
+                <marker date="1543658935436" expanded="true" signature="6359:6361" ph="..." />
               </folding>
             </state>
           </provider>
@@ -158,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/C_每日数据code/留存_每日充值用户/每日充值新用户留存.py" />
         <option value="$PROJECT_DIR$/build/small_lz_yl.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run4.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run5.py" />
@@ -178,7 +194,6 @@
         <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run3.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/周月报告/周报.py" />
         <option value="$PROJECT_DIR$/信德拉取登入.py" />
-        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/浪仔_1.0/run3.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/周月报告/Func.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/留存_每日充值用户/新用户留存plus.py" />
@@ -208,11 +223,13 @@
         <option value="$PROJECT_DIR$/C_每日数据code/周月报告/合并每日生成文件.py" />
         <option value="$PROJECT_DIR$/C_每日数据code/周月报告/合并每日生成文件_于.py" />
         <option value="$PROJECT_DIR$/build/提取往日数据.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" />
         <option value="$PROJECT_DIR$/build/database.py" />
+        <option value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="306" />
     <option name="y" value="79" />
     <option name="width" value="1400" />
@@ -248,7 +265,7 @@
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="C_每日数据code" type="462c0819:PsiDirectoryNode" />
-              <item name="周月报告" type="462c0819:PsiDirectoryNode" />
+              <item name="奇奇乐_1.0" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -287,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.database">
+  <component name="RunManager" selected="Python.main">
     <configuration name="提取往日数据" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,48 +318,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build/提取往日数据.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="信德拉取登入" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/日常功能/晶" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/日常功能/晶/信德拉取登入.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="合并每日生成文件" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/周月报告" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/周月报告/合并每日生成文件.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -771,20 +746,62 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.提取往日数据" />
-      <item itemvalue="Python.信德拉取登入" />
       <item itemvalue="Python.database" />
-      <item itemvalue="Python.合并每日生成文件" />
       <item itemvalue="Python.合并每日生成文件_于" />
+      <item itemvalue="Python.run7" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.run7" />
         <item itemvalue="Python.database" />
         <item itemvalue="Python.提取往日数据" />
         <item itemvalue="Python.合并每日生成文件_于" />
-        <item itemvalue="Python.合并每日生成文件" />
-        <item itemvalue="Python.信德拉取登入" />
       </list>
     </recent_temporary>
   </component>
@@ -825,9 +842,9 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32925472" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947146" weight="0.32925472" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947146" weight="0.44048944" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005285" side_tool="true" weight="0.32925472" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.4916574" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.4393771" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -837,7 +854,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/备用/dingding01.py" />
     <entry file="file://$USER_HOME$/Desktop/test02.py" />
     <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run3.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1091,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/Func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1205,13 +1214,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
           <folding>
-            <element signature="e#6168#6183#0" />
-            <marker date="1543656315967" expanded="true" signature="6013:6016" ph="..." />
-            <marker date="1543656315967" expanded="true" signature="6270:6272" ph="..." />
+            <marker date="1543658935436" expanded="true" signature="6102:6105" ph="..." />
+            <marker date="1543658935436" expanded="true" signature="6359:6361" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/run7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+            <element signature="e#243#561#0" />
+            <element signature="e#580#936#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/C_每日数据code/奇奇乐_1.0/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
         </state>
       </provider>
     </entry>
