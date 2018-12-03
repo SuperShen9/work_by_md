@@ -9,7 +9,7 @@ import warnings
 from build.database import date,url22,url88
 warnings.filterwarnings('ignore')
 
-from Func import yesterday, bef_yesterday
+from Func import yesterday, bef_yesterday,bb_yesterday
 
 
 def run2():
@@ -19,23 +19,18 @@ def run2():
     df3 = date(url88)
 
     # 提取充值数据的日期
-    df['day'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0].split('-')[-1])
+    df['day'] = df['pay_time'].apply(lambda x: pd.to_datetime(str(x).split(' ')[0]))
 
-    # #监测第一步
-    # df.to_excel('C:\\Users\Administrator\Desktop\\数据监测—step1.xlsx', index=False)
-    # print(df.head())
-    # exit()
+    # # 提取【大前天】的日期
+    # df2 = df[df['day'] == pd.to_datetime(bef_yesterday)]
+    # df = df[df['day'] == pd.to_datetime(bb_yesterday)]
 
     # df和df2重新赋值
-    df2 = df[df['day'] == str(int(str(yesterday)[-2:]))]
+    df2 = df[df['day'] == pd.to_datetime(yesterday)]
 
     # 注册人数df
-    df = df[df['day'] == str(int(str(bef_yesterday)[-2:]))]
+    df = df[df['day'] == pd.to_datetime(bef_yesterday)]
 
-    # 监测第二步
-    # print(str(yesterday)[-2:])
-    # print(df.head())
-    # exit()
 
     # 整理前2天当日的注册数据
     df3['Flag'] = 'new'
@@ -90,3 +85,4 @@ def run2():
 
 if __name__ == '__main__':
     df = run2()
+    print(df)

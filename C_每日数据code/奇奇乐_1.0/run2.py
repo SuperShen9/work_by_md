@@ -21,13 +21,13 @@ def run2():
     df3 = date(url8)
 
     # 提取充值数据的日期
-    df['day'] = df['pay_time'].apply(lambda x: str(x).split(' ')[0].split('-')[-1])
+    df['day'] = df['pay_time'].apply(lambda x: pd.to_datetime(str(x).split(' ')[0]))
 
     # df和df2重新赋值
-    df2 = df[df['day'] == str(int(str(yesterday)[-2:]))]
+    df2 = df[df['day'] == pd.to_datetime(yesterday)]
 
     # 注册人数df
-    df = df[df['day'] == str(int(str(bef_yesterday)[-2:]))]
+    df = df[df['day'] == pd.to_datetime(bef_yesterday)]
 
 
     # 整理前2天当日的注册数据

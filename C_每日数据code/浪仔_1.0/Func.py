@@ -6,6 +6,7 @@ import datetime
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
 bef_yesterday = today - datetime.timedelta(days=2)
+bb_yesterday = today - datetime.timedelta(days=3)
 hour = datetime.datetime.now().strftime('%H')
 
 pd.set_option('expand_frame_repr', False)

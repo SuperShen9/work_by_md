@@ -105,7 +105,7 @@ def liucun(df, df_cz, df_zc, choose='new'):
         if n == 0:
             list1.append('登入时间')
         else:
-            list1.append(str(list(df.columns)[n])[8:10] + '号用户')
+            list1.append(str(list(df.columns)[n])[5:10] + '号用户')
 
     df.columns = list1
 

@@ -21,6 +21,7 @@ def run6():
     df.set_index('gen_time', inplace=True)
 
     df_s = pd.DataFrame(df.groupby('gen_time').size())
+    df.reset_index(inplace=True)
 
     df = df.groupby('gen_time').sum()
 
